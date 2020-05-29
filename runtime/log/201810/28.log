@@ -1,0 +1,295 @@
+---------------------------------------------------------------
+[ 2018-10-28T03:05:19+08:00 ] 180.101.214.21 GET /admin/dashboard?ref=addtabs
+[ info ] api.kkkbw.cn/admin/dashboard?ref=addtabs [运行时间：0.006408s][吞吐率：156.06req/s] [内存消耗：580.52kb] [文件加载：71]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000034s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000479s ]
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'dashboard',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'api.kkkbw.cn',
+  'connection' => 'Keep-Alive',
+  'accept-encoding' => 'gzip',
+  'cf-ipcountry' => 'CN',
+  'x-forwarded-for' => '180.101.214.21',
+  'cf-ray' => '47076e59873f43b3-SZV',
+  'x-forwarded-proto' => 'http',
+  'cf-visitor' => '{"scheme":"http"}',
+  'user-agent' => 'Go-http-client/1.1',
+  'cf-connecting-ip' => '180.101.214.21',
+)
+[ info ] [ PARAM ] array (
+  'ref' => 'addtabs',
+)
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000401s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /home/wwwroot/apiweb/public_html/public/../application/common/view/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000057s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-28T03:05:19+08:00 ] 180.101.214.148 GET /admin/dashboard?addtabs=1
+[ info ] api.kkkbw.cn/admin/dashboard?addtabs=1 [运行时间：0.014803s][吞吐率：67.55req/s] [内存消耗：580.56kb] [文件加载：71]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000043s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000727s ]
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'dashboard',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'api.kkkbw.cn',
+  'connection' => 'Keep-Alive',
+  'accept-encoding' => 'gzip',
+  'cf-ipcountry' => 'CN',
+  'x-forwarded-for' => '180.101.214.148',
+  'cf-ray' => '47076e5984d143a1-SZV',
+  'x-forwarded-proto' => 'http',
+  'cf-visitor' => '{"scheme":"http"}',
+  'user-agent' => 'Go-http-client/1.1',
+  'cf-connecting-ip' => '180.101.214.148',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000195s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /home/wwwroot/apiweb/public_html/public/../application/common/view/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000093s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-28T04:41:33+08:00 ] 58.217.192.54 GET /
+[ info ] api.kkkbw.cn/ [运行时间：0.013911s][吞吐率：71.89req/s] [内存消耗：643.20kb] [文件加载：68]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000112s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001487s ]
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'api.kkkbw.cn',
+  'connection' => 'Keep-Alive',
+  'accept-encoding' => 'gzip',
+  'cf-ipcountry' => 'CN',
+  'x-forwarded-for' => '58.217.192.54',
+  'cf-ray' => '4707fb53a1a14364-SZV',
+  'x-forwarded-proto' => 'http',
+  'cf-visitor' => '{"scheme":"http"}',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cache-control' => 'max-age=0',
+  'cf-connecting-ip' => '58.217.192.54',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000483s ]
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /home/wwwroot/apiweb/public_html/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /home/wwwroot/apiweb/public_html/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-28T22:49:10+08:00 ] 180.101.214.148 GET /admin/index/login?url=%2Fadmin%2Findex%2Findex
+[ info ] api.kkkbw.cn/admin/index/login?url=%2Fadmin%2Findex%2Findex [运行时间：0.012439s][吞吐率：80.39req/s] [内存消耗：692.27kb] [文件加载：74]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000057s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002537s ]
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'api.kkkbw.cn',
+  'connection' => 'Keep-Alive',
+  'accept-encoding' => 'gzip',
+  'cf-ipcountry' => 'CN',
+  'x-forwarded-for' => '180.101.214.148',
+  'cf-ray' => '470e347ff1a843b3-SZV',
+  'x-forwarded-proto' => 'http',
+  'cf-visitor' => '{"scheme":"http"}',
+  'user-agent' => 'Go-http-client/1.1',
+  'cf-connecting-ip' => '180.101.214.148',
+)
+[ info ] [ PARAM ] array (
+  'url' => '/admin/index/index',
+)
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000362s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->login[ /home/wwwroot/apiweb/public_html/application/admin/controller/Index.php ]
+[ info ] [ VIEW ] /home/wwwroot/apiweb/public_html/public/../application/admin/view/index/login.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'background',
+  6 => 'title',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000053s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-28T22:49:10+08:00 ] 180.101.214.148 GET /admin/index/login
+[ info ] api.kkkbw.cn/admin/index/login [运行时间：0.007956s][吞吐率：125.69req/s] [内存消耗：691.45kb] [文件加载：74]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000031s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001227s ]
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'api.kkkbw.cn',
+  'connection' => 'Keep-Alive',
+  'accept-encoding' => 'gzip',
+  'cf-ipcountry' => 'CN',
+  'x-forwarded-for' => '180.101.214.148',
+  'cf-ray' => '470e347ff72043a1-SZV',
+  'x-forwarded-proto' => 'http',
+  'cf-visitor' => '{"scheme":"http"}',
+  'user-agent' => 'Go-http-client/1.1',
+  'cf-connecting-ip' => '180.101.214.148',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000288s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->login[ /home/wwwroot/apiweb/public_html/application/admin/controller/Index.php ]
+[ info ] [ VIEW ] /home/wwwroot/apiweb/public_html/public/../application/admin/view/index/login.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'background',
+  6 => 'title',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000070s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-28T22:49:20+08:00 ] 180.101.214.20 GET /admin/dashboard
+[ info ] api.kkkbw.cn/admin/dashboard [运行时间：0.006935s][吞吐率：144.19req/s] [内存消耗：579.80kb] [文件加载：71]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000039s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000577s ]
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'dashboard',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'api.kkkbw.cn',
+  'connection' => 'Keep-Alive',
+  'accept-encoding' => 'gzip',
+  'cf-ipcountry' => 'CN',
+  'x-forwarded-for' => '180.101.214.20',
+  'cf-ray' => '470e34bee51f43bf-SZV',
+  'x-forwarded-proto' => 'http',
+  'cf-visitor' => '{"scheme":"http"}',
+  'user-agent' => 'Go-http-client/1.1',
+  'cf-connecting-ip' => '180.101.214.20',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000296s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /home/wwwroot/apiweb/public_html/public/../application/common/view/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000055s ]
+[ info ] [ LOG ] INIT File

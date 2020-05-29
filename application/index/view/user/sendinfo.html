@@ -1,0 +1,36 @@
+<div id="content-container" class="container">
+    <div class="row">
+        <div class="col-md-2">
+            {include file="common/sidenav" /}
+        </div>
+        <div class="col-md-10">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h2 class="page-header">设置发货人信息</h2>
+                    <form id="sendinfo-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+                        <div class="form-group">
+                            <label for="fren" class="control-label col-xs-12 col-sm-2">发件人:</label>
+                            <div class="col-xs-12 col-sm-4">
+                                <input type="text" class="form-control" id="fren" name="fren" value="{$user.fren}" data-rule="required" placeholder="底单上显示">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="fhao" class="control-label col-xs-12 col-sm-2">发件号码:</label>
+                            <div class="col-xs-12 col-sm-4">
+                                <input type="text" class="form-control" id="fhao" name="fhao" value="{$user.fhao}" data-rule="required,mobile" placeholder="底单上显示" />
+                            </div>
+                        </div>
+
+                        <div class="form-group normal-footer">
+                            <label class="control-label col-xs-12 col-sm-2"></label>
+                            <div class="col-xs-12 col-sm-8">
+                                <button type="submit" class="btn btn-success btn-embossed disabled">{:__('Submit')}</button>
+                                <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

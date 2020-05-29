@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {include file="common/meta" /}
+        <link href="__CDN__/assets/css/user.css?v={$Think.config.site.version}" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#header-navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="{:url('/')}" style="padding:6px 15px;"><img src="/assets/img/logo.png" style="height:40px;" alt=""></a>
+                </div>
+                <div class="collapse navbar-collapse" id="header-navbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/" >{:__('Home')}</a></li>
+                        <li><a href="{:url('recharge/recharge')}" >充值</a></li>
+                        {if $user}
+                            <li><a href="{:url('user/index')}">您好：{$user.username}</a></li>
+                            <li><a href="{:url('user/score')}"><i class="fa fa-rmb fa-fw"></i>{$user.money}</a></li>
+                            <li><a href="{:url('user/logout')}"><i class="fa fa-sign-out fa-fw"></i>退出</a></li>
+                             {else /}
+                             <li><a href="{:url('user/login')}"><i class="fa fa-sign-in fa-fw"></i> {:__('Sign in')}</a></li>
+                             <li><a href="{:url('user/register')}"><i class="fa fa-user-o fa-fw"></i> {:__('Sign up')}</a></li>
+                         {/if}
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <main class="content">
+            {__CONTENT__}
+        </main>
+         
+        <footer class="footer" style="clear:both">  
+            <p class="copyright">Copyright&nbsp;©&nbsp;2017-2018 Powered by <a href="/" target="_blank">{$site.name}</a> All Rights Reserved <a href="https://www.miibeian.gov.cn" target="_blank">{$site.beian}</a></p>
+        </footer>
+
+        {include file="common/script" /}
+ <script type="text/javascript">
+function OnlineOver(){
+document.getElementById("aFloatTools_Show").style.display = "none";
+document.getElementById("divFloatToolsView").style.display = "block";
+document.getElementById("aFloatTools_Hide").style.display = "block";
+document.getElementById("floatTools").style.width = "190px";
+}
+function OnlineOut(){
+document.getElementById("aFloatTools_Show").style.display = "block";
+document.getElementById("aFloatTools_Hide").style.display = "none";
+document.getElementById("divFloatToolsView").style.display = "none";
+document.getElementById("floatTools").style.width = "36px";
+}
+if(typeof(HTMLElement)!="undefined")    //给firefox定义contains()方法，ie下不起作用
+{   
+      HTMLElement.prototype.contains=function(obj)   
+      {   
+          while(obj!=null&&typeof(obj.tagName)!="undefind"){ //通过循环对比来判断是不是obj的父元素
+   　　　　if(obj==this) return true;   
+   　　　　obj=obj.parentNode;
+   　　}   
+          return false;   
+      };   
+}  
+function hideMsgBox(theEvent){ //theEvent用来传入事件，Firefox的方式
+　 if (theEvent){
+　 var browser=navigator.userAgent; //取得浏览器属性
+　 if (browser.indexOf("Firefox")>0){ //如果是Firefox
+　　 if (document.getElementById('divFloatToolsView').contains(theEvent.relatedTarget)) { //如果是子元素
+　　 return; //结束函式
+} 
+} 
+if (browser.indexOf("MSIE")>0){ //如果是IE
+if (document.getElementById('divFloatToolsView').contains(event.toElement)) { //如果是子元素
+return; //结束函式
+}
+}
+}
+/*要执行的操作*/
+document.getElementById("aFloatTools_Show").style.display = "block";
+document.getElementById("aFloatTools_Hide").style.display = "none";
+document.getElementById("divFloatToolsView").style.display = "none";
+document.getElementById("floatTools").style.width = "36px";
+}
+</script>
+<style type="text/css">
+	.rides-cs {  font-size: 12px; background:#29a7e2; position: fixed; top: 250px; right: 0px; _position: absolute; z-index: 1500; border-radius:6px 0px 0 6px;}
+	.rides-cs a { color: #00A0E9;}
+	.rides-cs a:hover { color: #ff8100; text-decoration: none;}
+	.rides-cs .floatL { width: 36px; float:left; position: relative; z-index:1;margin-top: 21px;height: 181px;}
+	.rides-cs .floatL a { font-size:0; text-indent: -999em; display: block;}
+	.rides-cs .floatR { width: 130px; float: left; padding: 5px; overflow:hidden;}
+	.rides-cs .floatR .cn {background:#F7F7F7; border-radius:6px;margin-top:4px;}
+	.rides-cs .cn .titZx{ font-size: 14px; color: #333;font-weight:600; line-height:24px;text-align:center;}
+	.rides-cs .cn ul {padding:0px;}
+	.rides-cs .cn ul li { padding-top: 3px; border-bottom: solid 1px #E6E4E4;overflow: hidden;text-align:center;}
+	.rides-cs .cn ul li span { color: #777;}
+	.rides-cs .cn ul li a{color: #777;}
+	.rides-cs .cn ul li img { vertical-align: middle; display:inline}
+	.rides-cs .btnOpen, .rides-cs .btnCtn {  position: relative; z-index:9; top:25px; left: 0;  background-image: url(/qqopen.png); background-repeat: no-repeat; display:block;  height: 146px; padding: 8px;}
+	.rides-cs .btnOpen { background-position: 0 0;}
+	.rides-cs .btnCtn { background-position: -37px 0;}
+	.rides-cs ul li.top { border-bottom: solid #ACE5F9 1px;}
+	.rides-cs ul li.bot { border-bottom: none;}
+</style>
+<div id="floatTools" class="rides-cs" style="height:246px;">
+  <div class="floatL">
+  	<a id="aFloatTools_Show" class="btnOpen" title="查看在线客服" style="top:20px;display:block" href="javascript:OnlineOver();">展开</a>
+  	<a id="aFloatTools_Hide" class="btnCtn" title="关闭在线客服" style="top:20px;display:none" href="javascript:hideMsgBox()">收缩</a>
+  </div>
+  <div id="divFloatToolsView" class="floatR" style="display:none;height:237px;width:140px;">
+    <div class="cn">
+      <h4 class="titZx">在线咨询</h4>
+      <ul>                                            
+        <li><span>客服</span> <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin={$site.qqhao}&site=qq&menu=yes"><img border="0" src="/button_111.gif" alt="点击这里给我发消息" title="点击这里给我发消息"/></a></li>
+        <li><span>代理</span> <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=	{$site.dailiqq}&site=qq&menu=yes"><img border="0" src="/button_111.gif" alt="点击这里给我发消息" title="点击这里给我发消息"/></a></li>
+        {neq name="site.weixinkf" value="0"}
+         <li><img src="	{$site.weixinkf}" width="130" height="130"></li>
+        {/neq} 
+        <li style="border:none;"><span>每天9:00-18:00在线</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+    </body>
+
+</html>

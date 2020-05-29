@@ -1,0 +1,87 @@
+<style>
+    .basicinfo {
+        margin: 15px 0;
+    }
+
+    .basicinfo .row > .col-xs-4 {
+        padding-right: 0;
+    }
+
+    .basicinfo .row > div {
+        margin: 5px 0;
+    }
+</style>
+<div id="content-container" class="container">
+    <div class="row">
+        <div class="col-md-2">
+            {include file="common/sidenav" /}
+        </div>
+        <div class="col-md-10">
+            <div class="panel panel-default ">
+                <div class="panel-body">
+                   <h2 class="page-header">{$user.username}的会员中心</h2>
+                    <div class="row user-baseinfo">
+                        <div class="col-md-9 col-sm-9 col-xs-10">
+                            <!-- Content -->
+                            <div class="ui-content">
+                                <!-- Success -->
+                                <div class="basicinfo">
+                                    <div class="row">
+                                        <div class="col-xs-4 col-md-2">余额</div>
+                                        <div class="col-xs-8 col-md-4"><a href="/user/score.html" data-toggle="tooltip" title="点击查看明细" class="viewlv">{$user.money}</a>
+                                        </div>
+                                        <div class="col-xs-4 col-md-2">等级积分</div>
+                                        <div class="col-xs-8 col-md-4"><a href="/user/score.html" data-toggle="tooltip" title="只做升级用,充值一元送一积分" class="viewscore">{$user.score}</a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-4 col-md-2">{:__('Successions')}</div>
+                                        <div class="col-xs-8 col-md-4">{$user.successions} {:__('Day')}</div>
+                                        <div class="col-xs-4 col-md-2">等级</div>
+                                        <div class="col-xs-8 col-md-4">{:getlv($user.level)['name']}</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-4 col-md-2">{:__('Logintime')}</div>
+                                        <div class="col-xs-8 col-md-4">{$user.logintime|date="Y-m-d H:i:s",###}</div>
+                                        <div class="col-xs-4 col-md-2">{:__('Prevtime')}</div>
+                                        <div class="col-xs-8 col-md-4">{$user.prevtime|date="Y-m-d H:i:s",###}</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-2">推广赚钱</div>
+                                        <div class="col-md-10" style="color: red">	{$site.tginfo}。{$url}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="page-header">公告&帮助中心</h2>
+                    <div class="row user-dashboard">
+                      <div class="col-md-6">
+					    <ul class="list-unstyled">
+					    	{volist name="newslist" id="nl"}
+					    	  <li><p class="clearfix" style="border-bottom: 1px solid #eeeeee;"><a href="/index/news/ids/{$nl.id}" class="pull-left" target="_blank">{$i}、{$nl.title}</a><span class="text-muted pull-right">{$nl.create_time|date="Y-m-d",###}</span></p></li>
+							{/volist}
+					    </ul>	
+					  </div>
+					  <div class="col-md-6">
+                        <table class="table table-striped table-bordered table-hover">
+                         <thead><tr><th>会员等级</th><th>所需积分</th><th>圆通价格</th><th>韵达</th></tr></thead>
+                         <tbody>
+							 {volist name="list" id="vr"}
+									<tr {eq name="$vr['id']" value="$user['level']"}class="success"{/eq}>
+										<td>{$vr.name}</td>
+										<td>{$vr.low_price}</td>
+										<td>{$vr.yto}</td>
+										<td>{$vr.yunda}</td>
+									</tr>
+							  {/volist}
+                          </tbody>
+                         </table>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>

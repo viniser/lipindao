@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{$site.name}-专业礼品代发平台-拍A发B的最佳选择</title>
+        <meta name="keywords" content="{$site.keyword}">
+        <meta name="description" content="{$site.desc}">
+        <link rel="shortcut icon" href="/assets/img/favicon.ico" />
+        <!-- Bootstrap Core CSS -->
+        <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link href="__CDN__/assets/css/index.css" rel="stylesheet">
+        <link rel="stylesheet" href="/assets/css/diy.css">
+        <!-- Plugin CSS -->
+ 
+<script type="text/javascript">
+    var require = {
+        config: {$config|json_encode}
+    };
+</script>
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="//cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+            <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#header-navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="{:url('/')}" style="padding:6px 15px;"><img src="/assets/img/logo.png" style="height:40px;" alt=""></a>
+                </div>
+                <div class="collapse navbar-collapse" id="header-navbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/" >{:__('Home')}</a></li>
+                        <li><a href="{:url('recharge/recharge')}" >充值</a></li>
+                        {if $user}
+                            <li><a href="{:url('user/index')}">您好：{$user.username}</a></li>
+                            <li><a href="{:url('user/score')}"><i class="fa fa-rmb fa-fw"></i>{$user.money}</a></li>
+                            <li><a href="{:url('user/logout')}"><i class="fa fa-sign-out fa-fw"></i>退出</a></li>
+                             {else /}
+                             <li><a href="{:url('user/login')}"><i class="fa fa-sign-in fa-fw"></i> {:__('Sign in')}</a></li>
+                             <li><a href="{:url('user/register')}"><i class="fa fa-user-o fa-fw"></i> {:__('Sign up')}</a></li>
+                         {/if}
+                    </ul>
+                </div>
+            </div>
+        </nav>
+       <main class="content">
+		<div id="myCarousel" class="carousel slide page-index section fp-auto-height" data-ride="carousel" data-interval="5000">
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1" class=""></li>
+			</ol>
+		<div class="carousel-inner">
+		 <div class="item bgimg-01 active">
+            <div class="container">
+                <div class="pro-con pull-left">
+                    <h1 class="animated bounceInDown">
+                        礼品一站式采购
+                    </h1>
+                    <p class="animated slideInRight">
+                        一件起发,价格实惠，送客户，送朋友的好选择<br/>全国多个仓库发货，自由选择，让您快速收到货
+                    </p>
+                    <a href="#" class="btn btn-primary animated fadeInUp">
+                        了解详情
+                    </a>
+                </div>
+            </div>
+         </div>
+        <div class="item bgimg-02">
+            <div class="container">
+                <div class="pro-con pull-right">
+                    <h1 class="animated slideInRight">
+                        礼品商城正式上线
+                    </h1>
+                    <p class="animated slideInLeft">
+                        更多选择，更多惊喜。全国发货，价格更低，多仓发货，欢迎下单选择。
+                    </p>
+                    <a href="/user/login.html" class="btn btn-primary animated fadeInUp">
+                        立即购买
+                    </a>
+                </div>
+            </div>
+		</div>
+	   </div>	
+		<a class="carousel-control left" href="#myCarousel" data-slide="prev">
+			<svg version="1.1" id="_x31_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 28 87" enable-background="new 0 0 28 87" xml:space="preserve">
+				<polygon fill-rule="evenodd" clip-rule="evenodd" fill="#fff" points="2.6,43.3 27.6,1.6 25.9,0.5 0.3,43.3 0.3,43.3 0.3,43.3 ,0.3,43.3 0.3,43.3 26,86.5 27.7,85.4 ">
+				</polygon>
+			</svg>
+		</a>
+		<a class="carousel-control right" href="#myCarousel" data-slide="next">
+			<svg version="1.1" id="_x30_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 28 87" enable-background="new 0 0 28 87" xml:space="preserve">
+				<polygon fill-rule="evenodd" clip-rule="evenodd" fill="#fff" points="25.4,43.7 0.4,85.4 2.1,86.5 27.7,43.7 27.7,43.7 ,27.7,43.7 27.7,43.7 27.7,43.7 2,0.5 0.3,1.6 ">
+				</polygon>
+			</svg>
+		</a>
+	  </div>
+     <section class="addon-section">
+		<div class="container">
+			<div class="text-line">
+					<h5><span>精选商品</span>
+					</h5>
+					<div class="subtitle">全国多仓发货</div>
+			 </div>
+				<div class="addon-filter">
+					<ul class="nav nav-pills hidden-xs tab">
+						<li role="presentation" class="active"><a href="/goods/lists.html">全部</a></li>
+						<li role="presentation"><a href="/goods/lists/sort/price.html" rel="nofollow">价格排序</a></li>
+						 
+					</ul>
+					<div class="addon-post btn-group pull-right"><a href="/goods/lists.html" class="btn btn-default"> 更多 </a></div>
+				</div>
+				<div class="addon-list">
+					<div class="row">
+					 {volist name="goodslist" id="gl"}
+					  <div class="col-lg-3 col-md-4 col-xs-6 grid-item">
+						<div class="addon-item"><div class="tags tags-recommend"></div>
+						   <div class="addon-img">
+								<a href="/goods/detail/gid/{$gl.id}.html" title="{$gl.name}">
+								 <img src="{$gl.goods_image}" alt="{$gl.name}" class="img-responsive" width="300" height="200"></a>
+							</div>
+							<div class="addon-info">
+								<div class="title"> <a href="/goods/detail/gid/{$gl.id}.html" target="_blank" title="{$gl.name}">{$gl.name}</a> </div>
+								<div class="metas clearfix"> 
+									<span class="text-danger"><i class="fa fa-rmb"></i>{$gl.price}</span>  
+									<span class="addon-price"> 
+									   <a href="/goods/order/gid/{$gl.id}.html" class="btn btn-primary btn-sm active" role="button">立即购买</a>
+									</span> 
+								</div>
+							</div>
+						</div>
+					  </div>
+					 {/volist}
+					</div>
+				</div>
+            <div class="row user-dashboard">
+                <div class="col-md-6">
+                    <div class="panel panel-default index-discussionlist">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><i class="es-icon es-icon-whatshot pull-left"></i>帮助说明</h3>
+                        </div>
+                        <div class="panel-body row">
+                            <ul class="list-unstyled">
+                                {volist name="newslist" id="nl"}
+                                <li>
+                                    <p class="clearfix">
+                                        <a href="/index/news/ids/{$nl.id}.html" class="pull-left"> {$nl.title}</a>
+                                        <span class="text-muted pull-right">{$nl.create_time|date="Y-m-d",###}</span>
+                                    </p>
+                                </li>
+                                {/volist}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-default index-discussionlist">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><i class="es-icon es-icon-whatshot pull-left"></i>网站公告</h3>
+                        </div>
+                        <div class="panel-body row">
+                            <ul class="list-unstyled">
+                                {volist name="glist" id="gl"}
+                                <li>
+                                    <p class="clearfix">
+                                        <a href="/index/news/ids/{$gl.id}.html" class="pull-left"> {$gl.title}</a>
+                                        <span class="text-muted pull-right">{$gl.create_time|date="Y-m-d",###}</span>
+                                    </p>
+                                </li>
+                                {/volist}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			</div>
+
+	  </section>
+     </main>
+     <footer>
+            <div class="container">
+                 
+                <p>&copy; 2017-2018 <a href="/" target="_blank">{$site.name}</a><a href="https://www.lipindao.com/"><b>礼品代发</b></a> All Rights Reserved.</p>
+               <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?ef6f53a7b501f3fac7d4c8694c3b9354";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+            </div>
+      </footer>
+
+      <script src="__CDN__/assets/js/require{$Think.config.app_debug?'':'.min'}.js" data-main="__CDN__/assets/js/require-frontend{$Think.config.app_debug?'':'.min'}.js?v={$site.version}"></script>
+ 
+
+    </body>
+
+</html>

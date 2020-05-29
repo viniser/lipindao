@@ -1,0 +1,71 @@
+<div id="content-container" class="container">
+    <div class="row">
+        <div class="col-md-2">
+            {include file="common/sidenav" /}
+        </div>
+        <div class="col-md-10">
+            <div class="panel panel-default ">
+                  <div class="panel-body">
+                       <h2 class="page-header">批量导入快递</h2>
+						 <form name="form" id="upload-form" class="form-horizontal" method="POST" action="/express/import">
+							<div class="form-group">
+								<label class="control-label col-xs-12 col-sm-2">快递:</label>
+								<div class="col-xs-12 col-sm-6">
+								 <div class="radio">
+								     <label ><input  name="expressid" type="radio" value="1" checked="checked"> 圆通-全网通用</label>
+								     <label ><input  name="expressid" type="radio" value="3"> 圆通-拼多多专用 </label>
+								     <label >您当前的单价为：<span id="lp">{:getlv($user.level)['yto']}</span>元</label>
+								 </div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-xs-12 col-sm-2">发货地址:</label>
+								<div class="col-xs-12 col-sm-6">
+									<select class="form-control" name="addsid" data-rule="required" >
+									  {volist name="myaddress" id="vo" empty="$empty"}
+									  <option value="{$vo.id}">{$vo.dianpu}-{$vo.fajianren}-{$vo.a_province}-{$vo.city}-{$vo.area}-{$vo.address}</option>
+									  {/volist}                         
+									</select>
+								</div>
+                           </div>
+                           <div class="form-group">
+                            <label class="control-label col-xs-12 col-sm-2">重量:</label>
+                            <div class="col-xs-12 col-sm-4">
+                                <input type="text" class="form-control" id="weight" name="weight" value="" data-rule="required;range[0.1~40]" placeholder="范围0.1-40kg">
+                            </div>
+                          </div>
+                           <div class="form-group">
+                            <label class="control-label col-xs-12 col-sm-2">物品:</label>
+                            <div class="col-xs-12 col-sm-4">
+                                <input type="text" class="form-control" id="goods" name="goods" value=""  placeholder="10个字内">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="control-label col-xs-12 col-sm-2">导入说明:</label>
+                            <div class="col-xs-12 col-sm-8">
+                                <div class="b">淘宝拼多多后台导出的表格直接上传导入</div>
+                                <div class="b">其他平台<a href="/daoru.xls" target="_blank">点击这里下载</a>模板导入</div>
+                            </div>
+                          </div>
+                           <div class="form-group">
+                            <label class="control-label col-xs-12 col-sm-2">收货地址:</label>
+                            <div class="col-xs-12 col-sm-8">
+                                 
+                                 <a href="javascript:;" class="btn btn-danger plupload" id="plupload-xls" data-mimetype="csv,xls,xlsx" data-input-id="c-avatar"><i class="fa fa-upload"></i> 点击上传表格</a>
+                                 <input type="hidden" name="avatar" id="c-avatar" value="" data-rule="required"/>
+                                 
+                            </div>
+                          </div>
+                          <div class="form-group normal-footer">
+                            <label class="control-label col-xs-12 col-sm-2"></label>
+                            <div class="col-xs-12 col-sm-4">
+                                <button type="submit" class="btn btn-success btn-embossed disabled">{:__('Ok')}</button>
+                            </div>
+                          </div>		  	
+						</form>
+					</div>
+            </div>
+        </div>
+    </div>
+</div> 
+ 

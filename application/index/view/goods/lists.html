@@ -1,0 +1,39 @@
+<section class="addon-section">	
+		<div class="container">
+			<div class="text-line">
+					<h5><span>精选商品</span>
+					</h5>
+					<div class="subtitle">全国多仓发货</div>
+			 </div>
+				<div class="addon-filter">
+					<ul class="nav nav-pills hidden-xs tab">
+						<li role="presentation" class="{$activ=='0'?'active':''}"><a href="/goods/lists.html">全部</a></li>
+						<li role="presentation" class="{:$activ=='1'?'active':''}"><a href="/goods/lists/sort/price.html" rel="nofollow">价格排序</a></li>
+						 
+					</ul>
+				</div>
+				<div class="addon-list">
+					<div class="row">
+					 {volist name="goodslist" id="gl"}
+					  <div class="col-lg-3 col-md-4 col-xs-6 grid-item">
+						<div class="addon-item"><div class="tags tags-recommend"></div>
+						   <div class="addon-img">
+								<a href="/goods/detail/gid/{$gl.id}.html" title="{$gl.name}">
+								 <img src="{$gl.goods_image}" alt="{$gl.name}" class="img-responsive" width="300" height="200"></a>
+							</div>
+							<div class="addon-info">
+								<div class="title"> <a href="/goods/detail/gid/{$gl.id}.html" target="_blank" title="{$gl.name}">{$gl.name}</a> </div>
+								<div class="metas clearfix"> 
+									<span class="text-danger"><i class="fa fa-rmb"></i>{$gl.price}</span>  
+									<span class="addon-price"> 
+									   <a href="/goods/order/gid/{$gl.id}.html" class="btn btn-primary btn-sm active" role="button">立即购买</a>
+									</span> 
+								</div>
+							</div>
+						</div>
+					  </div>
+					 {/volist}
+					</div>
+				</div>
+			</div>
+		</section>	

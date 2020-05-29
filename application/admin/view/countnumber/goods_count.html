@@ -1,0 +1,47 @@
+<style type="text/css">
+	.table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td ,.table-bordered > thead > tr > th{
+    border: 1px solid #dce2e6;
+}
+</style>
+<div class='panel panel-default panel-intro'>
+    <div class="panel-body">
+		<div id="toolbar" class="toolbar">
+			<form class="form-inline" role="form" action='' method='get' id=form>
+				<div class="form-group">
+					<label for="start_time" class="control-label">选择日期</label>
+					<input type="text" class="form-control datetimepicker" data-date-format="YYYY-MM-DD 00:00:00" name='start_time' value="{$start}" placeholder="选择开始日期" id='start_time'>
+				</div>
+				<div class="form-group">
+					<label class="control-label" for="end_time">-</label>
+					<input type="text" class="form-control datetimepicker" data-date-format="YYYY-MM-DD 23:59:59" name='end_time' value="{$end}" placeholder="选择截止日期" id='end_time'>
+				</div>
+				<div class="form-group">
+					<div class="input-group">
+						<input type="text" class="form-control" name='keywords' value="{$keywords}" placeholder="输入商品ID">
+						<span class="input-group-btn">
+						<button class="btn btn-default" type="submit" id='search'>查询</button>
+					</span>
+					</div>
+				</div>
+			</form>
+		</div>
+		<table class='table table-bordered '>
+			<thead>
+				<tr>
+					<th>商品ID</th>
+					<th>商品名称</th>
+					<th>商品销量</th>
+				</tr>
+			</thead>
+			<tbody>
+				{foreach $goods_info as $vo}
+				<tr>
+					<td>{$vo.goods}</td>
+					<td>{:get_goodsname($vo.goods)}</td>
+					<td>{$vo.count}</td>
+				</tr>
+				{/foreach}
+			</tbody>
+		</table>
+	</div>
+</div>

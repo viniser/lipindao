@@ -1,0 +1,70 @@
+<div id='content-container' class='container'>
+    <ol class="breadcrumb"><li><a href="/" aria-label="首页">首页</a></li><li><a href="/goods/lists.html" >礼品中心</a></li><li class="active">详情</li></ol>
+	<div class="row">
+		<div class="col-md-9">
+           <div class='list-desc' >
+				<div class='left-img'>
+					<div class='big-image'><img src="{$data.goods_image}" alt="{$data.name}"></div>
+					<div class='small-img'>
+						<img src="{$data.goods_image}"  class='small-list'>
+					</div>
+				</div>
+				<div class='right-operate'>
+					<h2>{$data.name}</h2>
+					<div class='sell-price'>
+						<span>价格</span><i>￥{$data.price}</i>
+					</div>
+					<div class='number'>
+						<span>数量</span>
+						<span class="add-lost">{$data.weight}kg</span>
+					</div>
+					<form action="" method="POST">
+					<div class='number'>
+						<span>数量</span>
+						<div class='add-lost'>
+							<span class='f1' id="jian">－</span>
+							<input type="text" name="num" value='1' class='count' data-rule="required;digits;range[1~20]">
+							<span class='f1' id="jia">＋</span>
+						</div>&nbsp;&nbsp;
+						<span> 库存(99件)</span>
+					</div>
+					<div class='at-once'>
+						<input type="hidden" name="gid" value={$data.id}>
+						<button type="submit" class="btn btn-danger btn-lg ">立即购买</button>
+					</div>
+					</form>
+				</div>
+		    </div>
+            <div class="goods-detail">
+				<div class='boundary'>
+					<span class="page-header">商品详情</span>
+				</div>
+				<div class='textarea'>
+					{$data.content}
+				</div>
+		    </div>
+        </div>
+        <div class="col-md-3">
+           <div class="panel panel-default index-discussionlist">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="es-icon es-icon-whatshot pull-left"></i>热卖推荐</h3>
+                    </div>
+                    <div class="panel-body row">
+                      {foreach $rands as $val}
+						<div class='floor-recommend'>
+							<div class='floor-recommend-pic'>
+							  <a href="/goods/detail/gid/{$val.id}.html"><img src="{$val.goods_image}" width='65px' height='65px' alt="{$val.name}"></a>
+							</div>
+							<div class='floor-recommend-desc'>
+								<div class='floor-recommend-name'><a href="/goods/detail/gid/{$val.id}.html">{$val.name}</a></div>
+								<div class='floor-recommend-weight'>重量:{$val.weight}</div>
+								<div class='floor-recommend-price'>￥{$val.price}</div>
+							</div>
+						</div>	
+					 {/foreach}
+                   </div>
+                </div> 
+        </div>
+	</div>
+</div>
+

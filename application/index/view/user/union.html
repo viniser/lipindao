@@ -1,0 +1,40 @@
+<div id="content-container" class="container">
+    <div class="row">
+        <div class="col-md-2">
+            {include file="common/sidenav" /}
+        </div>
+        <div class="col-md-10">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                        <div class="form-group">{$site.tginfo}。{$url}</div>
+                        <div class="form-group">
+                            <table class="table table-striped table-bordered table-hover table-nowrap">
+                                <thead>
+                                <tr>
+                                    <th>用户名</th>
+                                    <th>充值次数</th>
+                                    <th>注册时间</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {volist name="list" id="vo" }
+                                <tr>
+                                    <td>{$vo.username|substr=###,0,3}****</td>
+                                    <td>{:get_paynum($vo.id)}</td>
+                                    <td>{:date('Y-m-d', $vo['createtime'])}</td>
+                                </tr>
+                                {/volist}
+                                </tbody>
+                            </table>
+                            <div class="fixed-table-pagination">
+                                <div class="">
+                                    {$page}
+                                </div>
+                            </div>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

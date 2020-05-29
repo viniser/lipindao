@@ -1,0 +1,22 @@
+<div class="sidenav">
+    {:hook('user_sidenav_before')}
+    <ul class="list-group">
+        <li class="list-group-heading">单号管理</li>
+        <li class="list-group-item {:$config['actionname']=='index'?'active':''}"> <a href="{:url('user/index')}"><i class="fa fa-user-circle fa-fw"></i> 会员首页</a> </li>
+        <li class="list-group-item {:$config['controllername']=='goods'?'active':''}"> <a href="{:url('/goods/lists')}"><i class="fa fa-shopping-cart fa-fw"></i>购买礼品</a> </li>
+        <li class="list-group-item {:$config['actionname']=='exlist'?'active':''}"> <a href="{:url('express/exlist')}"><i class="fa fa-list fa-fw"></i>订单管理</a> </li>
+        <li class="list-group-item {:$config['actionname']=='ulist'?'active':''}"> <a href="{:url('express/ulist')}"><i class="fa fa-list fa-fw"></i>导入记录</a> </li>
+        <li class="list-group-item {:$config['actionname']=='sendinfo'?'active':''}"> <a href="{:url('user/sendinfo')}"><i class="fa fa-address-card fa-fw"></i>发件信息</a> </li>
+        <li class="list-group-item {:$config['actionname']=='favorite'?'active':''}"> <a href="{:url('goods/favorite')}"><i class="fa fa-star fa-fw"></i>我的收藏</a> </li>
+	</ul>    
+    <ul class="list-group">
+        <li class="list-group-heading">用户中心</li>
+        <li class="list-group-item {:$config['actionname']=='recharge'?'active':''}"><a href="{:url('index/recharge/recharge')}"><i class="fa fa-cny fa-fw"></i> {:__('充值')}</a></li>
+        <li class="list-group-item {:$config['actionname']=='union'?'active':''}"> <a href="{:url('user/union')}"><i class="fa fa-share-alt fa-fw"></i>推广中心</a> </li>
+        <li class="list-group-item {:$config['actionname']=='score'?'active':''}"> <a href="{:url('user/score')}"><i class="fa fa-rmb fa-fw"></i>资金明细</a> </li>
+        <li class="list-group-item {:$config['actionname']=='changepwd'?'active':''}"> <a href="{:url('user/changepwd')}"><i class="fa fa-key fa-fw"></i>修改密码</a> </li>
+        <li class="list-group-item {:$config['actionname']=='logout'?'active':''}"> <a href="{:url('user/logout')}"><i class="fa fa-sign-out fa-fw"></i>退出</a> </li>
+        <li class="list-group-item {:$config['actionname']=='api'?'active':''}"> <a href="/api.html"><i class="fa fa-desktop fa-fw"></i>api接口</a> </li>
+    </ul>
+    {:hook('user_sidenav_after')}
+</div>

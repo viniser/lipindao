@@ -1,0 +1,104 @@
+<style type="text/css">
+  .table-bordered > tbody > tr > td{
+    text-align: left;
+    vertical-align: middle;
+  }
+#nums .msg-box{
+    margin-top: -15px;
+    margin-left: -90px;
+}
+#navtab {
+    border-bottom: 0px solid #ddd;
+}	
+</style>
+<div id="content-container" class="container">
+    <div class="row">
+        <div class="col-md-2">
+            {include file="common/sidenav" /}
+        </div>
+        <div class="col-md-10">
+             <ul class="nav nav-tabs"  id="navtab">
+                 {empty name="sid"}
+                 <li><a href="/goods/order/gid/{$id}/num/{$num}.html">普通上传</a></li>
+                 {else /}
+                 <li><a href="/goods/order/gid/{$id}/num/{$num}/sid/{$sid}.html">普通上传</a></li>
+                 {/empty}
+                  <li class="active"><a href="javascrip:void();" >批量上传</a></li>
+                </ul>
+            <div class="panel panel-default ">
+             <div class="panel-body">  
+			<form name="form" role="form" id="upload-form" class="form-horizontal" method="POST" action="">
+			 <div class="form-group">
+              <label class="control-label col-xs-12 col-sm-2">商品信息:</label>
+              <div class="col-xs-12 col-sm-8">
+                <table class='table table-striped table-bordered'>
+                  <thead>
+                    <tr>
+                      <th>商品名称</th>
+                      <th>商品图片</th>
+                      <th>购买数量</th>
+                      <th>商品单价</th>
+                      <th>快递费用</th>
+                      <th>商品总价</th>
+                      <th>总价</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>{$data.name}</td>
+                      <td><img src="{$data.goods_image}" width="45px" height="45px"></td>
+                      <td id="nums">
+                        <input type="number" class="form-control" placeholder="默认为1个" style='width:78px;height: 31px' value="{$num}" id='num' name='num'  data-rule="required;digits;range[1~10]" data-msg-digits="请输入正整数" {if condition="$primary_key.is_multiple ==0"}readonly{/if}>
+                      </td>
+                      <td><span class='price'>{$data.price}</span></td>
+                      <td><span class='express_price'>{:get_price($user.level,$primary_key['express_id'])}</span></td>
+                      <td><span class="goods-price">{$data.price*$num}</span></td>
+                      <td><span class='total-price'>{:get_price($user.level,$primary_key['express_id'])+$data.price*$num}</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+                <input type="hidden" name="gid" value="{$data.id}">
+             <div class="form-group">
+              <label class="control-label col-xs-12 col-sm-2">发货仓:</label>
+              <div class="col-xs-12 col-sm-8">
+                <div class="radio">
+                    {foreach $stores as $key=>$vo}
+                    <label>
+                        <input  name="store_id" type="radio" value="{$vo.id}" {if condition="$key==0"}checked{/if}>{$vo.store_name}
+                        &nbsp;<span>发货地址:{$vo.send_address}</span>
+                    </label>
+                    {/foreach}
+                </div>
+              </div>
+            </div>
+              <div class="form-group">
+                <label class="control-label col-xs-12 col-sm-2">导入说明:</label>
+                <div class="col-xs-12 col-sm-8">
+                    <div class="b">淘宝拼多多后台导出的表格直接上传导入</div>
+                    <div class="b">其他平台<a href="/daoru.xls" target="_blank">点击这里下载</a>模板导入</div>
+                </div>
+              </div>
+               <div class="form-group">
+                <label class="control-label col-xs-12 col-sm-2">收货地址:</label>
+                <div class="col-xs-12 col-sm-8">
+                     
+                     <a href="javascript:;" class="btn btn-danger plupload" id="plupload-xls" data-mimetype="csv,xls,xlsx" data-input-id="c-avatar"><i class="fa fa-upload"></i> 点击上传表格</a>
+                     <input type="hidden" name="avatar" id="c-avatar" value="" data-rule="required"/>
+                     
+                </div>
+              </div>
+              <div class="form-group layer-footer">
+                <label class="control-label col-xs-12 col-sm-2"></label>
+                <div class="col-xs-12 col-sm-4">
+                    <input type="submit" class="btn btn-success btn-embossed disabled" value="确定提交">
+                </div>
+              </div>		  	
+						</form>
+					</div>
+            </div>
+        </div>
+    </div>
+</div> 
+ 

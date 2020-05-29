@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="电子面单系统1">
+        <title>电子面单系统1</title>
+        <link href="https://cdn.bootcss.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.bootcss.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet">
+        <style type="text/css">
+            body {
+                padding-top: 70px; margin-bottom: 15px;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                font-family: "Roboto", "SF Pro SC", "SF Pro Display", "SF Pro Icons", "PingFang SC", BlinkMacSystemFont, -apple-system, "Segoe UI", "Microsoft Yahei", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+                font-weight: 400;
+            }
+            h2        { font-size: 1.6em; }
+            hr        { margin-top: 10px; }
+            .tab-pane { padding-top: 10px; }
+            .mt0      { margin-top: 0px; }
+            .footer   { font-size: 12px; color: #666; }
+            .label    { display: inline-block; min-width: 65px; padding: 0.3em 0.6em 0.3em; }
+            .string   { color: green; }
+            .number   { color: darkorange; }
+            .boolean  { color: blue; }
+            .null     { color: magenta; }
+            .key      { color: red; }
+            .popover  { max-width: 400px; max-height: 400px; overflow-y: auto;}
+            .list-group.panel > .list-group-item {
+            }
+            .list-group-item:last-child {
+                border-radius:0;
+            }
+            h4.panel-title a {
+                font-weight:normal;
+                font-size:14px;
+            }
+            h4.panel-title a .text-muted {
+                font-size:12px;
+                font-weight:normal;
+                font-family: 'Verdana';
+            }
+            #sidebar {
+                width: 220px;
+                position: fixed;
+                margin-left: -240px;
+                overflow-y:auto;
+            }
+            #sidebar > .list-group {
+                margin-bottom:0;
+            }
+            #sidebar > .list-group > a{
+                text-indent:0;
+            }
+            #sidebar .child {
+                border:1px solid #ddd;
+                border-bottom:none;
+            }
+            #sidebar .child > a {
+                border:0;
+            }
+            #sidebar .list-group a.current {
+                background:#f5f5f5;
+            }
+            @media (max-width: 1620px){
+                #sidebar {
+                    margin:0;
+                }
+                #accordion {
+                    padding-left:235px;
+                }
+            }
+            @media (max-width: 768px){
+                #sidebar {
+                    display: none;
+                }
+                #accordion {
+                    padding-left:0px;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <!-- Fixed navbar -->
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/" target="_blank">电子面单系统1</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <form class="navbar-form navbar-right">
+                        <div class="form-group">
+                            Token:
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control input-sm" data-toggle="tooltip" title="Token在会员注册或登录后都会返回,WEB端同时存在于Cookie中" placeholder="token" id="token" />
+                        </div>
+                        <div class="form-group">
+                            Apiurl:
+                        </div>
+                        <div class="form-group">
+                            <input id="apiUrl" type="text" class="form-control input-sm" data-toggle="tooltip" title="API接口URL" placeholder="https://api.mydomain.com" value="" />
+                        </div>
+                        <div class="form-group">
+                            <button type="button" class="btn btn-success btn-sm" data-toggle="tooltip" title="点击保存后Token和Api url都将保存在本地Localstorage中" id="save_data">
+                                <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                    </form>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- menu -->
+            <div id="sidebar">
+                <div class="list-group panel">
+                                        <a href="#Token接口" class="list-group-item" data-toggle="collapse" data-parent="#sidebar">Token接口  <i class="fa fa-caret-down"></i></a>
+                    <div class="child collapse" id="Token接口">
+                                                <a href="javascript:;" data-id="0" class="list-group-item">检测Token是否过期</a>
+                                                <a href="javascript:;" data-id="1" class="list-group-item">刷新Token</a>
+                                            </div>
+                                        <a href="#电子面单接口" class="list-group-item" data-toggle="collapse" data-parent="#sidebar">电子面单接口  <i class="fa fa-caret-down"></i></a>
+                    <div class="child collapse" id="电子面单接口">
+                                                <a href="javascript:;" data-id="2" class="list-group-item">获取电子面单</a>
+                                                <a href="javascript:;" data-id="3" class="list-group-item">查询余额</a>
+                                            </div>
+                                    </div>
+            </div>
+            <div class="panel-group" id="accordion">
+                                <h2>Token接口</h2>
+                <hr>
+                                <div class="panel panel-default">
+                    <div class="panel-heading" id="heading-0">
+                        <h4 class="panel-title">
+                            <span class="label label-primary">POST</span>
+                            <a data-toggle="collapse" data-parent="#accordion0" href="#collapseOne0"> 检测Token是否过期 <span class="text-muted">/api/token/check</span></a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne0" class="panel-collapse collapse">
+                        <div class="panel-body">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" id="doctab0">
+                                <li class="active"><a href="#info0" data-toggle="tab">基础信息</a></li>
+                                <li><a href="#sandbox0" data-toggle="tab">在线测试</a></li>
+                                <li><a href="#sample0" data-toggle="tab">返回示例</a></li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+
+                                <div class="tab-pane active" id="info0">
+                                    <div class="well">
+                                        检测Token是否过期                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading"><strong>Headers</strong></div>
+                                        <div class="panel-body">
+                                                                                        <table class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>名称</th>
+                                                        <th>类型</th>
+                                                        <th>必选</th>
+                                                        <th>描述</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                                                                        <tr>
+                                                        <td>token</td>
+                                                        <td>string</td>
+                                                        <td>是</td>
+                                                        <td>请求的Token，注：token值请放在headers</td>
+                                                    </tr>
+                                                                                                    </tbody>
+                                            </table>
+                                                                                    </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading"><strong>参数</strong></div>
+                                        <div class="panel-body">
+                                                                                        无
+                                                                                    </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading"><strong>正文</strong></div>
+                                        <div class="panel-body">
+                                            无                                        </div>
+                                    </div>
+                                </div><!-- #info -->
+
+                                <div class="tab-pane" id="sandbox0">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                                                                        <div class="panel panel-default">
+                                                <div class="panel-heading"><strong>Headers</strong></div>
+                                                <div class="panel-body">
+                                                    <div class="headers">
+                                                                                                                <div class="form-group">
+                                                            <label class="control-label" for="token">token</label>
+                                                            <input type="string" class="form-control input-sm" id="token" required placeholder="请求的Token，注：token值请放在headers - Ex: " name="token">
+                                                        </div>
+                                                                                                            </div>
+                                                </div>
+                                            </div>
+                                                                                        <div class="panel panel-default">
+                                                <div class="panel-heading"><strong>参数</strong></div>
+                                                <div class="panel-body">
+                                                    <form enctype="application/x-www-form-urlencoded" role="form" action="/api/token/check" method="POST" name="form0" id="form0">
+                                                                                                                <div class="form-group">
+                                                            无
+                                                        </div>
+                                                                                                                <div class="form-group">
+                                                            <button type="submit" class="btn btn-success send" rel="0">提交</button>
+                                                            <button type="reset" class="btn btn-info" rel="0">重置</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading"><strong>响应输出</strong></div>
+                                                <div class="panel-body">
+                                                    <div class="row">
+                                                        <div class="col-md-12" style="overflow-x:auto">
+                                                            <pre id="response_headers0"></pre>
+                                                            <pre id="response0"></pre>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading"><strong>返回参数</strong></div>
+                                                <div class="panel-body">
+                                                                                                        <table class="table table-hover">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>名称</th>
+                                                                <th>类型</th>
+                                                                <th>描述</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                                                                                        <tr>
+                                                                <td>code</td>
+                                                                <td>integer</td>
+                                                                <td>状态值：1 为成功</td>
+                                                            </tr>
+                                                                                                                        <tr>
+                                                                <td>msg</td>
+                                                                <td>string</td>
+                                                                <td>返回成功</td>
+                                                            </tr>
+                                                                                                                        <tr>
+                                                                <td>time</td>
+                                                                <td>string</td>
+                                                                <td>响应的时间戳</td>
+                                                            </tr>
+                                                                                                                        <tr>
+                                                                <td>data</td>
+                                                                <td>object</td>
+                                                                <td>返回业务数据合集</td>
+                                                            </tr>
+                                                                                                                        <tr>
+                                                                <td>token</td>
+                                                                <td>string</td>
+                                                                <td>token值</td>
+                                                            </tr>
+                                                                                                                        <tr>
+                                                                <td>expires_in</td>
+                                                                <td>int</td>
+                                                                <td>token剩余时间，单位秒</td>
+                                                            </tr>
+                                                                                                                    </tbody>
+                                                    </table>
+                                                                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- #sandbox -->
+
+                                <div class="tab-pane" id="sample0">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <pre id="sample_response0">{"code": 1,"msg": "","time": "1540347545","data": {"token": "8cxxx-4510-458f-a642-xxx","expires_in": 77759987}}</pre>
+                                        </div>
+                                    </div>
+                                </div><!-- #sample -->
+
+                            </div><!-- .tab-content -->
+                        </div>
+                    </div>
+                </div>
+                                <div class="panel panel-default">
+                    <div class="panel-heading" id="heading-1">
+                        <h4 class="panel-title">
+                            <span class="label label-primary">POST</span>
+                            <a data-toggle="collapse" data-parent="#accordion1" href="#collapseOne1"> 刷新Token <span class="text-muted">/api/token/refresh</span></a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne1" class="panel-collapse collapse">
+                        <div class="panel-body">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" id="doctab1">
+                                <li class="active"><a href="#info1" data-toggle="tab">基础信息</a></li>
+                                <li><a href="#sandbox1" data-toggle="tab">在线测试</a></li>
+                                <li><a href="#sample1" data-toggle="tab">返回示例</a></li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+
+                                <div class="tab-pane active" id="info1">
+                                    <div class="well">
+                                        重新获取token值。刷新后原token将失效                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading"><strong>Headers</strong></div>
+                                        <div class="panel-body">
+                                                                                        <table class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>名称</th>
+                                                        <th>类型</th>
+                                                        <th>必选</th>
+                                                        <th>描述</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                                                                        <tr>
+                                                        <td>token</td>
+                                                        <td>string</td>
+                                                        <td>是</td>
+                                                        <td>请求的原Token，注：token值请放在headers</td>
+                                                    </tr>
+                                                                                                    </tbody>
+                                            </table>
+                                                                                    </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading"><strong>参数</strong></div>
+                                        <div class="panel-body">
+                                                                                        无
+                                                                                    </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading"><strong>正文</strong></div>
+                                        <div class="panel-body">
+                                            无                                        </div>
+                                    </div>
+                                </div><!-- #info -->
+
+                                <div class="tab-pane" id="sandbox1">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                                                                        <div class="panel panel-default">
+                                                <div class="panel-heading"><strong>Headers</strong></div>
+                                                <div class="panel-body">
+                                                    <div class="headers">
+                                                                                                                <div class="form-group">
+                                                            <label class="control-label" for="token">token</label>
+                                                            <input type="string" class="form-control input-sm" id="token" required placeholder="请求的原Token，注：token值请放在headers - Ex: " name="token">
+                                                        </div>
+                                                                                                            </div>
+                                                </div>
+                                            </div>
+                                                                                        <div class="panel panel-default">
+                                                <div class="panel-heading"><strong>参数</strong></div>
+                                                <div class="panel-body">
+                                                    <form enctype="application/x-www-form-urlencoded" role="form" action="/api/token/refresh" method="POST" name="form1" id="form1">
+                                                                                                                <div class="form-group">
+                                                            无
+                                                        </div>
+                                                                                                                <div class="form-group">
+                                                            <button type="submit" class="btn btn-success send" rel="1">提交</button>
+                                                            <button type="reset" class="btn btn-info" rel="1">重置</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading"><strong>响应输出</strong></div>
+                                                <div class="panel-body">
+                                                    <div class="row">
+                                                        <div class="col-md-12" style="overflow-x:auto">
+                                                            <pre id="response_headers1"></pre>
+                                                            <pre id="response1"></pre>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading"><strong>返回参数</strong></div>
+                                                <div class="panel-body">
+                                                                                                        <table class="table table-hover">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>名称</th>
+                                                                <th>类型</th>
+                                                                <th>描述</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                                                                                        <tr>
+                                                                <td>code</td>
+                                                                <td>integer</td>
+                                                                <td>状态值：1 为成功</td>
+                                                            </tr>
+                                                                                                                        <tr>
+                                                                <td>msg</td>
+                                                                <td>string</td>
+                                                                <td>返回成功</td>
+                                                            </tr>
+                                                                                                                        <tr>
+                                                                <td>time</td>
+                                                                <td>string</td>
+                                                                <td>响应的时间戳</td>
+                                                            </tr>
+                                                                                                                        <tr>
+                                                                <td>data</td>
+                                                                <td>object</td>
+                                                                <td>返回业务数据合集</td>
+                                                            </tr>
+                                                                                                                        <tr>
+                                                                <td>token</td>
+                                                                <td>string</td>
+                                                                <td>token值</td>
+                                                            </tr>
+                                                                                                                        <tr>
+                                                                <td>expires_in</td>
+                                                                <td>int</td>
+                                                                <td>token剩余时间，单位秒</td>
+                                                            </tr>
+                                                                                                                    </tbody>
+                                                    </table>
+                                                                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- #sandbox -->
+
+                                <div class="tab-pane" id="sample1">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <pre id="sample_response1">{"code": 1,"msg": "","time": "1540347545","data": {"token": "8cxxx-4510-458f-a642-xxx","expires_in": 77759987}}</pre>
+                                        </div>
+                                    </div>
+                                </div><!-- #sample -->
+
+                            </div><!-- .tab-content -->
+                        </div>
+                    </div>
+                </div>
+                                <h2>电子面单接口</h2>
+                <hr>
+                                <div class="panel panel-default">
+                    <div class="panel-heading" id="heading-2">
+                        <h4 class="panel-title">
+                            <span class="label label-primary">POST</span>
+                            <a data-toggle="collapse" data-parent="#accordion2" href="#collapseOne2"> 获取电子面单 <span class="text-muted">/api/express/getyto</span></a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne2" class="panel-collapse collapse">
+                        <div class="panel-body">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" id="doctab2">
+                                <li class="active"><a href="#info2" data-toggle="tab">基础信息</a></li>
+                                <li><a href="#sandbox2" data-toggle="tab">在线测试</a></li>
+                                <li><a href="#sample2" data-toggle="tab">返回示例</a></li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+
+                                <div class="tab-pane active" id="info2">
+                                    <div class="well">
+                                        电子单号下单接口                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading"><strong>Headers</strong></div>
+                                        <div class="panel-body">
+                                                                                        <table class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>名称</th>
+                                                        <th>类型</th>
+                                                        <th>必选</th>
+                                                        <th>描述</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                                                                        <tr>
+                                                        <td>token</td>
+                                                        <td>string</td>
+                                                        <td>是</td>
+                                                        <td>请求的Token，注：token值请放在headers</td>
+                                                    </tr>
+                                                                                                    </tbody>
+                                            </table>
+                                                                                    </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading"><strong>参数</strong></div>
+                                        <div class="panel-body">
+                                                                                        <table class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>名称</th>
+                                                        <th>类型</th>
+                                                        <th>必选</th>
+                                                        <th>描述</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                                                                        <tr>
+                                                        <td>send_order_no</td>
+                                                        <td>string</td>
+                                                        <td>是</td>
+                                                        <td>订单号，不可重复。</td>
+                                                    </tr>
+                                                                                                        <tr>
+                                                        <td>platform</td>
+                                                        <td>int</td>
+                                                        <td>是</td>
+                                                        <td>快递类型，1：圆通  3：圆通拼多多专用。</td>
+                                                    </tr>
+                                                                                                        <tr>
+                                                        <td>weight</td>
+                                                        <td>Double</td>
+                                                        <td>是</td>
+                                                        <td>包裹重量，范围在0.1-40kg</td>
+                                                    </tr>
+                                                                                                        <tr>
+                                                        <td>goods</td>
+                                                        <td>string</td>
+                                                        <td>是</td>
+                                                        <td>商品名称，30个字内</td>
+                                                    </tr>
+                                                                                                        <tr>
+                                                        <td>send_name</td>
+                                                        <td>string</td>
+                                                        <td>是</td>
+                                                        <td>发件人</td>
+                                                    </tr>
+                                                                                                        <tr>
+                                                        <td>send_mphone</td>
+                                                        <td>int</td>
+                                                        <td>是</td>
+                                                        <td>发件手机号码</td>
+                                                    </tr>
+                                                                                                        <tr>
+                                                        <td>send_province</td>
+                                                        <td>string</td>
+                                                        <td>是</td>
+                                                        <td>发件人省</td>
+                                                    </tr>
+                                                                                                        <tr>
+                                                        <td>send_city</td>
+                                                        <td>string</td>
+                                                        <td>是</td>
+                                                        <td>发件人市</td>
+                                                    </tr>
+                                                                                                        <tr>
+                                                        <td>send_district</td>
+                                                        <td>string</td>
+                                                        <td>是</td>
+                                                        <td>发件人区</td>
+                                                    </tr>
+                                                                                                        <tr>
+                                                        <td>send_address</td>
+                                                        <td>string</td>
+                                                        <td>是</td>
+                                                        <td>发件人详细地址</td>
+                                                    </tr>
+                                                                                                        <tr>
+                                                        <td>receiver_name</td>
+                                                        <td>string</td>
+                                                        <td>是</td>
+                                                        <td>收货人</td>
+                                                    </tr>
+                                                                                                        <tr>
+                                                        <td>receiver_mphone</td>
+                                                        <td>string</td>
+                                                        <td>是</td>
+                                                        <td>收货人号码</td>
+                                                    </tr>
+                                                                                                        <tr>
+                                                        <td>receiver_address</td>
+                                                        <td>string</td>
+                                                        <td>是</td>
+                                                        <td>收货地址。格式：浙江省 杭州市 余杭区 文体路88号</td>
+                                                    </tr>
+                                                                                                    </tbody>
+                                            </table>
+                                                                                    </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading"><strong>正文</strong></div>
+                                        <div class="panel-body">
+                                            无                                        </div>
+                                    </div>
+                                </div><!-- #info -->
+
+                                <div class="tab-pane" id="sandbox2">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                                                                        <div class="panel panel-default">
+                                                <div class="panel-heading"><strong>Headers</strong></div>
+                                                <div class="panel-body">
+                                                    <div class="headers">
+                                                                                                                <div class="form-group">
+                                                            <label class="control-label" for="token">token</label>
+                                                            <input type="string" class="form-control input-sm" id="token" required placeholder="请求的Token，注：token值请放在headers - Ex: " name="token">
+                                                        </div>
+                                                                                                            </div>
+                                                </div>
+                                            </div>
+                                                                                        <div class="panel panel-default">
+                                                <div class="panel-heading"><strong>参数</strong></div>
+                                                <div class="panel-body">
+                                                    <form enctype="application/x-www-form-urlencoded" role="form" action="/api/express/getyto" method="POST" name="form2" id="form2">
+                                                                                                                <div class="form-group">
+                                                            <label class="control-label" for="send_order_no">send_order_no</label>
+                                                            <input type="string" class="form-control input-sm" id="send_order_no" required placeholder="订单号，不可重复。" name="send_order_no">
+                                                        </div>
+                                                                                                                <div class="form-group">
+                                                            <label class="control-label" for="platform">platform</label>
+                                                            <input type="int" class="form-control input-sm" id="platform" required placeholder="快递类型，1：圆通 2：中通 3：圆通拼多多专用。" name="platform">
+                                                        </div>
+                                                                                                                <div class="form-group">
+                                                            <label class="control-label" for="weight">weight</label>
+                                                            <input type="Double" class="form-control input-sm" id="weight" required placeholder="包裹重量，范围在0.1-40kg" name="weight">
+                                                        </div>
+                                                                                                                <div class="form-group">
+                                                            <label class="control-label" for="goods">goods</label>
+                                                            <input type="string" class="form-control input-sm" id="goods" required placeholder="商品名称，30个字内" name="goods">
+                                                        </div>
+                                                                                                                <div class="form-group">
+                                                            <label class="control-label" for="send_name">send_name</label>
+                                                            <input type="string" class="form-control input-sm" id="send_name" required placeholder="发件人" name="send_name">
+                                                        </div>
+                                                                                                                <div class="form-group">
+                                                            <label class="control-label" for="send_mphone">send_mphone</label>
+                                                            <input type="int" class="form-control input-sm" id="send_mphone" required placeholder="发件手机号码" name="send_mphone">
+                                                        </div>
+                                                                                                                <div class="form-group">
+                                                            <label class="control-label" for="send_province">send_province</label>
+                                                            <input type="string" class="form-control input-sm" id="send_province" required placeholder="发件人省" name="send_province">
+                                                        </div>
+                                                                                                                <div class="form-group">
+                                                            <label class="control-label" for="send_city">send_city</label>
+                                                            <input type="string" class="form-control input-sm" id="send_city" required placeholder="发件人市" name="send_city">
+                                                        </div>
+                                                                                                                <div class="form-group">
+                                                            <label class="control-label" for="send_district">send_district</label>
+                                                            <input type="string" class="form-control input-sm" id="send_district" required placeholder="发件人区" name="send_district">
+                                                        </div>
+                                                                                                                <div class="form-group">
+                                                            <label class="control-label" for="send_address">send_address</label>
+                                                            <input type="string" class="form-control input-sm" id="send_address" required placeholder="发件人详细地址" name="send_address">
+                                                        </div>
+                                                                                                                <div class="form-group">
+                                                            <label class="control-label" for="receiver_name">receiver_name</label>
+                                                            <input type="string" class="form-control input-sm" id="receiver_name" required placeholder="收货人" name="receiver_name">
+                                                        </div>
+                                                                                                                <div class="form-group">
+                                                            <label class="control-label" for="receiver_mphone">receiver_mphone</label>
+                                                            <input type="string" class="form-control input-sm" id="receiver_mphone" required placeholder="收货人号码" name="receiver_mphone">
+                                                        </div>
+                                                                                                                <div class="form-group">
+                                                            <label class="control-label" for="receiver_address">receiver_address</label>
+                                                            <input type="string" class="form-control input-sm" id="receiver_address" required placeholder="收货地址。格式：浙江省 杭州市 余杭区 文体路88号" name="receiver_address">
+                                                        </div>
+                                                                                                                <div class="form-group">
+                                                            <button type="submit" class="btn btn-success send" rel="2">提交</button>
+                                                            <button type="reset" class="btn btn-info" rel="2">重置</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading"><strong>响应输出</strong></div>
+                                                <div class="panel-body">
+                                                    <div class="row">
+                                                        <div class="col-md-12" style="overflow-x:auto">
+                                                            <pre id="response_headers2"></pre>
+                                                            <pre id="response2"></pre>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading"><strong>返回参数</strong></div>
+                                                <div class="panel-body">
+                                                                                                        <table class="table table-hover">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>名称</th>
+                                                                <th>类型</th>
+                                                                <th>描述</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                                                                                        <tr>
+                                                                <td>code</td>
+                                                                <td>integer</td>
+                                                                <td>状态值：1 为成功</td>
+                                                            </tr>
+                                                                                                                        <tr>
+                                                                <td>msg</td>
+                                                                <td>string</td>
+                                                                <td>返回说明</td>
+                                                            </tr>
+                                                                                                                        <tr>
+                                                                <td>time</td>
+                                                                <td>string</td>
+                                                                <td>响应的时间戳</td>
+                                                            </tr>
+                                                                                                                        <tr>
+                                                                <td>data</td>
+                                                                <td>object</td>
+                                                                <td>返回业务数据合集</td>
+                                                            </tr>
+                                                                                                                        <tr>
+                                                                <td>express_no</td>
+                                                                <td>string</td>
+                                                                <td>快递单号</td>
+                                                            </tr>
+                                                                                                                        <tr>
+                                                                <td>taskid</td>
+                                                                <td>int</td>
+                                                                <td>单号ID，请保存</td>
+                                                            </tr>
+                                                                                                                        <tr>
+                                                                <td>p</td>
+                                                                <td>Double</td>
+                                                                <td>扣费金额</td>
+                                                            </tr>
+                                                                                                                    </tbody>
+                                                    </table>
+                                                                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- #sandbox -->
+
+                                <div class="tab-pane" id="sample2">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <pre id="sample_response2">{"code": 1,"msg": "","time": "1540347545","data": {"express_no": "80081082712","taskid": "98736","p": "3.0"}}</pre>
+                                        </div>
+                                    </div>
+                                </div><!-- #sample -->
+
+                            </div><!-- .tab-content -->
+                        </div>
+                    </div>
+                </div>
+                                <div class="panel panel-default">
+                    <div class="panel-heading" id="heading-3">
+                        <h4 class="panel-title">
+                            <span class="label label-primary">POST</span>
+                            <a data-toggle="collapse" data-parent="#accordion3" href="#collapseOne3"> 查询余额 <span class="text-muted">/api/express/getmoney</span></a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne3" class="panel-collapse collapse">
+                        <div class="panel-body">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" id="doctab3">
+                                <li class="active"><a href="#info3" data-toggle="tab">基础信息</a></li>
+                                <li><a href="#sandbox3" data-toggle="tab">在线测试</a></li>
+                                <li><a href="#sample3" data-toggle="tab">返回示例</a></li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+
+                                <div class="tab-pane active" id="info3">
+                                    <div class="well">
+                                        获取账号余额                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading"><strong>Headers</strong></div>
+                                        <div class="panel-body">
+                                                                                        <table class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>名称</th>
+                                                        <th>类型</th>
+                                                        <th>必选</th>
+                                                        <th>描述</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                                                                        <tr>
+                                                        <td>token</td>
+                                                        <td>string</td>
+                                                        <td>是</td>
+                                                        <td>请求的Token，注：token值请放在headers</td>
+                                                    </tr>
+                                                                                                    </tbody>
+                                            </table>
+                                                                                    </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading"><strong>参数</strong></div>
+                                        <div class="panel-body">
+                                                                                        无
+                                                                                    </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading"><strong>正文</strong></div>
+                                        <div class="panel-body">
+                                            无                                        </div>
+                                    </div>
+                                </div><!-- #info -->
+
+                                <div class="tab-pane" id="sandbox3">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                                                                        <div class="panel panel-default">
+                                                <div class="panel-heading"><strong>Headers</strong></div>
+                                                <div class="panel-body">
+                                                    <div class="headers">
+                                                                                                                <div class="form-group">
+                                                            <label class="control-label" for="token">token</label>
+                                                            <input type="string" class="form-control input-sm" id="token" required placeholder="请求的Token，注：token值请放在headers - Ex: " name="token">
+                                                        </div>
+                                                                                                            </div>
+                                                </div>
+                                            </div>
+                                                                                        <div class="panel panel-default">
+                                                <div class="panel-heading"><strong>参数</strong></div>
+                                                <div class="panel-body">
+                                                    <form enctype="application/x-www-form-urlencoded" role="form" action="/api/express/getmoney" method="POST" name="form3" id="form3">
+                                                                                                                <div class="form-group">
+                                                            无
+                                                        </div>
+                                                                                                                <div class="form-group">
+                                                            <button type="submit" class="btn btn-success send" rel="3">提交</button>
+                                                            <button type="reset" class="btn btn-info" rel="3">重置</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading"><strong>响应输出</strong></div>
+                                                <div class="panel-body">
+                                                    <div class="row">
+                                                        <div class="col-md-12" style="overflow-x:auto">
+                                                            <pre id="response_headers3"></pre>
+                                                            <pre id="response3"></pre>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading"><strong>返回参数</strong></div>
+                                                <div class="panel-body">
+                                                                                                        <table class="table table-hover">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>名称</th>
+                                                                <th>类型</th>
+                                                                <th>描述</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                                                                                        <tr>
+                                                                <td>code</td>
+                                                                <td>integer</td>
+                                                                <td>状态值：1 为成功</td>
+                                                            </tr>
+                                                                                                                        <tr>
+                                                                <td>msg</td>
+                                                                <td>string</td>
+                                                                <td>返回成功</td>
+                                                            </tr>
+                                                                                                                        <tr>
+                                                                <td>time</td>
+                                                                <td>string</td>
+                                                                <td>响应的时间戳</td>
+                                                            </tr>
+                                                                                                                        <tr>
+                                                                <td>data</td>
+                                                                <td>object</td>
+                                                                <td>返回业务数据合集</td>
+                                                            </tr>
+                                                                                                                        <tr>
+                                                                <td>usermoney</td>
+                                                                <td>string</td>
+                                                                <td>账号所剩余额</td>
+                                                            </tr>
+                                                                                                                    </tbody>
+                                                    </table>
+                                                                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- #sandbox -->
+
+                                <div class="tab-pane" id="sample3">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <pre id="sample_response3">{"code": 1,"msg": "","time": "1540347545","data": {"usermoney":88.88}}</pre>
+                                        </div>
+                                    </div>
+                                </div><!-- #sample -->
+
+                            </div><!-- .tab-content -->
+                        </div>
+                    </div>
+                </div>
+                            </div>
+
+            <hr>
+
+            <div class="row mt0 footer">
+                <div class="col-md-6" align="left">
+                    Generated on 2018-12-18 15:58:51                </div>
+                <div class="col-md-6" align="right">
+                    <a href="/" target="_blank">电子面单系统1</a>
+                </div>
+            </div>
+
+        </div> <!-- /container -->
+
+        <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+        <script src="https://cdn.bootcss.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            function syntaxHighlight(json) {
+                if (typeof json != 'string') {
+                    json = JSON.stringify(json, undefined, 2);
+                }
+                json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+                return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
+                    var cls = 'number';
+                    if (/^"/.test(match)) {
+                        if (/:$/.test(match)) {
+                            cls = 'key';
+                        } else {
+                            cls = 'string';
+                        }
+                    } else if (/true|false/.test(match)) {
+                        cls = 'boolean';
+                    } else if (/null/.test(match)) {
+                        cls = 'null';
+                    }
+                    return '<span class="' + cls + '">' + match + '</span>';
+                });
+            }
+
+            function prepareStr(str) {
+                try {
+                    return syntaxHighlight(JSON.stringify(JSON.parse(str.replace(/'/g, '"')), null, 2));
+                } catch (e) {
+                    return str;
+                }
+            }
+            var storage = (function () {
+                var uid = new Date;
+                var storage;
+                var result;
+                try {
+                    (storage = window.localStorage).setItem(uid, uid);
+                    result = storage.getItem(uid) == uid;
+                    storage.removeItem(uid);
+                    return result && storage;
+                } catch (exception) {
+                }
+            }());
+
+            $.fn.serializeObject = function ()
+            {
+                var o = {};
+                var a = this.serializeArray();
+                $.each(a, function () {
+                    if (!this.value) {
+                        return;
+                    }
+                    if (o[this.name] !== undefined) {
+                        if (!o[this.name].push) {
+                            o[this.name] = [o[this.name]];
+                        }
+                        o[this.name].push(this.value || '');
+                    } else {
+                        o[this.name] = this.value || '';
+                    }
+                });
+                return o;
+            };
+
+            $(document).ready(function () {
+
+                if (storage) {
+                    $('#token').val(storage.getItem('token'));
+                    $('#apiUrl').val(storage.getItem('apiUrl'));
+                }
+
+                $('[data-toggle="tooltip"]').tooltip({
+                    placement: 'bottom'
+                });
+
+                $(window).on("resize", function(){
+                    $("#sidebar").css("max-height", $(window).height()-80);
+                });
+
+                $(window).trigger("resize");
+
+                $(document).on("click", "#sidebar .list-group > .list-group-item", function(){
+                    $("#sidebar .list-group > .list-group-item").removeClass("current");
+                    $(this).addClass("current");
+                });
+                $(document).on("click", "#sidebar .child a", function(){
+                    var heading = $("#heading-"+$(this).data("id"));
+                    if(!heading.next().hasClass("in")){
+                        $("a", heading).trigger("click");
+                    }
+                    $("html,body").animate({scrollTop:heading.offset().top-70});
+                });
+
+                $('code[id^=response]').hide();
+
+                $.each($('pre[id^=sample_response],pre[id^=sample_post_body]'), function () {
+                    if ($(this).html() == 'NA') {
+                        return;
+                    }
+                    var str = prepareStr($(this).html());
+                    $(this).html(str);
+                });
+
+                $("[data-toggle=popover]").popover({placement: 'right'});
+
+                $('[data-toggle=popover]').on('shown.bs.popover', function () {
+                    var $sample = $(this).parent().find(".popover-content"),
+                            str = $(this).data('content');
+                    if (typeof str == "undefined" || str === "") {
+                        return;
+                    }
+                    var str = prepareStr(str);
+                    $sample.html('<pre>' + str + '</pre>');
+                });
+
+                $('body').on('click', '#save_data', function (e) {
+                    if (storage) {
+                        storage.setItem('token', $('#token').val());
+                        storage.setItem('apiUrl', $('#apiUrl').val());
+                    } else {
+                        alert('Your browser does not support local storage');
+                    }
+                });
+
+                $('body').on('click', '.send', function (e) {
+                    e.preventDefault();
+                    var form = $(this).closest('form');
+                    //added /g to get all the matched params instead of only first
+                    var matchedParamsInRoute = $(form).attr('action').match(/[^{]+(?=\})/g);
+                    var theId = $(this).attr('rel');
+                    //keep a copy of action attribute in order to modify the copy
+                    //instead of the initial attribute
+                    var url = $(form).attr('action');
+
+                    var formData = new FormData();
+
+                    $(form).find('input').each(function (i, input) {
+                        if ($(input).attr('type') == 'file') {
+                            formData.append($(input).attr('name'), $(input)[0].files[0]);
+                        } else {
+                            formData.append($(input).attr('name'), $(input).val())
+                        }
+                    });
+
+                    var index, key, value;
+
+                    if (matchedParamsInRoute) {
+                        var params = {};
+                        formData.forEach(function(value, key){
+                            params[key] = value;
+                        });
+                        for (index = 0; index < matchedParamsInRoute.length; ++index) {
+                            try {
+                                key = matchedParamsInRoute[index];
+                                value = params[key];
+                                if (typeof value == "undefined")
+                                    value = "";
+                                url = url.replace("\{" + key + "\}", value);
+                                formData.delete(key);
+                            } catch (err) {
+                                console.log(err);
+                            }
+                        }
+                    }
+
+                    var headers = {};
+
+                    var token = $('#token').val();
+                    if (token.length > 0) {
+                        headers['token'] = token;
+                    }
+
+                    $("#sandbox" + theId + " .headers input[type=text]").each(function () {
+                        val = $(this).val();
+                        if (val.length > 0) {
+                            headers[$(this).prop('name')] = val;
+                        }
+                    });
+
+                    $.ajax({
+                        url: $('#apiUrl').val() + url,
+                        data: $(form).prop('method').toLowerCase() == 'get' ? $(form).serialize() : formData,
+                        type: $(form).prop('method') + '',
+                        dataType: 'json',
+                        contentType: false,
+                        processData: false,
+                        headers: headers,
+                        success: function (data, textStatus, xhr) {
+                            if (typeof data === 'object') {
+                                var str = JSON.stringify(data, null, 2);
+                                $('#response' + theId).html(syntaxHighlight(str));
+                            } else {
+                                $('#response' + theId).html(data || '');
+                            }
+                            $('#response_headers' + theId).html('HTTP ' + xhr.status + ' ' + xhr.statusText + '<br/><br/>' + xhr.getAllResponseHeaders());
+                            $('#response' + theId).show();
+                        },
+                        error: function (xhr, textStatus, error) {
+                            try {
+                                var str = JSON.stringify($.parseJSON(xhr.responseText), null, 2);
+                            } catch (e) {
+                                var str = xhr.responseText;
+                            }
+                            $('#response_headers' + theId).html('HTTP ' + xhr.status + ' ' + xhr.statusText + '<br/><br/>' + xhr.getAllResponseHeaders());
+                            $('#response' + theId).html(syntaxHighlight(str));
+                            $('#response' + theId).show();
+                        }
+                    });
+                    return false;
+                });
+            });
+        </script>
+    </body>
+</html>

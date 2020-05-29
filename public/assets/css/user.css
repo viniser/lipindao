@@ -1,0 +1,268 @@
+h2.page-header {
+    margin:10px 0  25px 0;
+    padding-bottom:15px;
+}
+.user-baseinfo {
+    margin-bottom:25px;
+}
+.user-baseinfo table tr td {color:#999;}
+@media (min-width: 767px) {
+    .user-center .avatar-text,.user-center .avatar-img {
+        height:150px;width:150px;border-radius: 150px;line-height:150px;font-size:70px;
+    }
+    .user-center .avatar-img  {font-size:0;}
+    .user-center .avatar-img img {
+        height:150px;width:150px;border-radius:150px;
+    }
+}
+.text-line {
+    position: relative;
+
+    text-align: center;
+}
+.text-line h5 {
+    position: relative;
+    margin-bottom: 10px;
+    font-size: 32px;
+    z-index: 1;
+    color: #313131;
+}
+.text-line h5 > span {
+    padding: 0 40px;
+}
+.text-line .subtitle {
+    font-size: 16px;
+    color: #919191;
+}
+.addon-filter {
+    position: relative;
+    min-height: 48px;
+    margin: 0 0 10px 0;
+    padding-right: 150px;
+}
+.nav {
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+}
+.addon-filter .nav-pills > li {
+    margin: 0 30px 10px 0;
+}
+.nav-pills > li {
+    float: left;
+}
+.nav > li {
+    position: relative;
+    display: block;
+}
+.nav-pills > li.active > a {
+    border: none;
+    color: #fff;
+    background: #46c37b;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    border-radius: 3px;
+}
+.nav-pills > li.active > a {
+    font-weight: 600;
+}
+.addon-list .addon-item {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 30px;
+    -webkit-border-radius: 4px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 4px;
+    -moz-background-clip: padding;
+    border-radius: 4px;
+    background-clip: padding-box;
+    border: 1px solid #e4ecf3;
+    background-color: #fff;
+}
+.tags {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 999;
+    width: 68px;
+    height: 68px;
+    overflow: hidden;
+    background: url(../img/tags_corner.png) no-repeat 0 0;
+}
+.addon-list .addon-item .addon-img {
+    position: relative;
+    overflow: hidden;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.addon-list .addon-item .addon-img .img-responsive {
+    width: 100%;
+    padding: 10px;
+}
+.img-responsive, .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    display: block;
+    max-width: 100%;
+    height: 300px;
+}
+.addon-list .addon-item .title {
+    margin-top: 10px;
+    padding: 0 10px;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+.addon-list .addon-item .title a {
+    color: #444;
+    font-size: 13px;
+}
+.addon-list .addon-item:hover{transform:translateY(-6px);-webkit-transform:translateY(-6px);-moz-transform:translateY(-6px);-webkit-box-shadow:0 26px 40px -24px rgba(0,36,100,0.3);-moz-box-shadow:0 26px 40px -24px rgba(0,36,100,0.3);box-shadow:0 26px 40px -24px rgba(0,36,100,0.3);-webkit-transition:all 0.3s ease;-moz-transition:all 0.3s ease;-o-transition:all 0.3s ease;transition:all 0.3s ease;}}@media (max-width:767px){.addon-list .addon-item{margin-bottom:20px;margin-left:-5px;margin-right:-5px;}.addon-list .addon-item .addon-img .img-responsive{padding:5px;}.addon-list .addon-item .title{margin-top:5px;padding:0 5px;}}
+.metas {
+    position: relative;
+    padding: 10px;
+    color: #c1c1c1;
+}
+.text-danger {
+    color: #e74c3c;
+}
+.metas i {
+    margin-right: 5px;
+}
+.metas .addon-price {
+    float: right;
+}
+.tags.tags-free{background-position:0 0;}.tags.tags-hot{background-position:0 -68px;}.tags.tags-recommend{background-position:0 -68px;}.tags.tags-new{background-position:0 -136px;}.tags.tags-buy1get1free{background-position:0 -204px;}.tags.tags-recommend{background-position:0 -272px;}.tags.tags-unbuy{background-position:0 -340px;}
+	.list-desc{
+		width:100%;
+		height: 380px;
+	}
+	.left-img{
+		width:300px;
+		height:370px;
+		float: left;
+	}
+	.right-operate{
+		width:560px;
+		height:300px;
+		float: left;
+		 
+	}
+	.left-img .big-image img{
+		width: 300px;
+		height:300px;
+	}
+	.small-img{
+		width:300px;
+		height:70px;
+		margin-top: 5px;
+	}
+	.small-list{
+		width:50px;
+		height:50px;
+		border: 1px solid #f40;
+	}
+	.right-operate h2{
+		font-size: 20px;
+		font-weight: bold;
+		color: #292929;
+		margin-left: 10px
+	}
+	.sell-price{
+		width:540px;
+		height:60px;
+		margin-left: 10px;
+		margin-top: 10px;
+	}
+	.sell-price>span{
+		font-size: 14px;
+		line-height: 90px;
+		margin-right: 10px;
+	}
+	.sell-price>i{
+		font-size: 37px;
+		color:#f40;
+		vertical-align:middle;
+	}
+	.number{
+		width:550px;
+		height:50px;
+		margin-left: 10px;
+		line-height: 50px;
+	}
+	.add-lost{
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: 20px;
+	}
+	.f1{
+		display: inline-block;
+	    width: 30px;
+	    height: 30px;
+	    text-align: center;
+	    line-height: 28px;
+	    background-color: #ededed;
+	    border: solid 1px #b8b8b8;
+	    font-weight: bold;
+		cursor:pointer;
+	}
+	.count{
+	    width: 71px;
+	    height: 30px;
+	    text-align: center;
+	    background-color: #ffffff;
+	    border: 1px solid #b8b8b8;
+	}
+	.at-once{
+		width: 550px;
+		height:60px;
+		margin-left: 10px;
+		margin-top: 20px;
+	}
+	.goods-detail{
+		width: 100%;
+		height:600px;
+	}
+	.boundary{
+		border-width: 0px 0px 1px 0px;
+		border-style: solid;
+		border-color: gray;
+	}
+	.floor-recommend{
+		width: 220px;
+		height:95px;
+	}
+	.floor-recommend-pic>a>img{
+		margin-top: 15px;
+		float: left;
+	}
+	.floor-recommend-desc{
+		width: 118px;
+		height: 65px;
+		float: left;
+		margin-top: 15px;
+		margin-left: 10px;
+	}
+	.floor-recommend-name{
+		width: 118px;
+		height:22px;
+		font-size: 12px;
+		line-height: 22px;
+		overflow: hidden;
+		white-space: nowrap;
+      	text-overflow: ellipsis;
+	}
+	.floor-recommend-weight{
+		width:118px;
+		height:22px
+		line-height:22px;
+		margin-top: 1px;
+	}
+	.floor-recommend-price{
+		width: 118px;
+		height:22px;
+		line-height: 22px;
+		color:#f45;
+	}

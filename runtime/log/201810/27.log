@@ -1,0 +1,1532 @@
+---------------------------------------------------------------
+[ 2018-10-27T04:36:00+08:00 ] 58.217.192.54 GET /
+[ info ] api.kkkbw.cn/ [运行时间：0.010475s][吞吐率：95.47req/s] [内存消耗：643.19kb] [文件加载：68]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000087s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001255s ]
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'api.kkkbw.cn',
+  'connection' => 'Keep-Alive',
+  'accept-encoding' => 'gzip',
+  'cf-ipcountry' => 'CN',
+  'x-forwarded-for' => '58.217.192.54',
+  'cf-ray' => '46ffb5d355b843ef-SZV',
+  'x-forwarded-proto' => 'http',
+  'cf-visitor' => '{"scheme":"http"}',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cache-control' => 'max-age=0',
+  'cf-connecting-ip' => '58.217.192.54',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000477s ]
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /home/wwwroot/apiweb/public_html/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /home/wwwroot/apiweb/public_html/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-27T11:29:06+08:00 ] 114.222.127.102 GET /admin/dashboard?ref=addtabs
+[ info ] api.kkkbw.cn/admin/dashboard?ref=addtabs [运行时间：0.008201s][吞吐率：121.94req/s] [内存消耗：636.84kb] [文件加载：73]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000045s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000686s ]
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'dashboard',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'api.kkkbw.cn',
+  'connection' => 'Keep-Alive',
+  'accept-encoding' => 'gzip',
+  'cf-ipcountry' => 'CN',
+  'x-forwarded-for' => '114.222.127.102',
+  'cf-ray' => '470212f6b78c4364-SZV',
+  'x-forwarded-proto' => 'http',
+  'cf-visitor' => '{"scheme":"http"}',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://api.kkkbw.cn/admin/addon?ref=addtabs',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=r5gvlm67fink486vc393n67qo5; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1540175189; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1540265255; uid=2; token=253366d6-c9c4-4ad5-8bf7-e4d3e07f103a; keeplogin=1%7C86400%7C1540535193%7C928f3b0a099e43b54786bae5b3af7def; UM_distinctid=166ae82c49d305-0b5b8218461388-346a7809-13c680-166ae82c49ebb6; __cfduid=dffac38d84811d17b97c16bf7e2ea91171540540289',
+  'cf-connecting-ip' => '114.222.127.102',
+)
+[ info ] [ PARAM ] array (
+  'ref' => 'addtabs',
+)
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000373s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /home/wwwroot/apiweb/public_html/public/../application/common/view/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000052s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-27T11:29:08+08:00 ] 114.222.127.102 GET /admin/index/login?url=%2Fadmin%2Fdashboard%3Fref%3Daddtabs
+[ info ] api.kkkbw.cn/admin/index/login?url=%2Fadmin%2Fdashboard%3Fref%3Daddtabs [运行时间：0.010869s][吞吐率：92.00req/s] [内存消耗：754.24kb] [文件加载：76]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000098s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000720s ]
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'api.kkkbw.cn',
+  'connection' => 'Keep-Alive',
+  'accept-encoding' => 'gzip',
+  'cf-ipcountry' => 'CN',
+  'x-forwarded-for' => '114.222.127.102',
+  'cf-ray' => '4702130233a24364-SZV',
+  'x-forwarded-proto' => 'http',
+  'cf-visitor' => '{"scheme":"http"}',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://api.kkkbw.cn/admin/dashboard?ref=addtabs',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=r5gvlm67fink486vc393n67qo5; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1540175189; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1540265255; uid=2; token=253366d6-c9c4-4ad5-8bf7-e4d3e07f103a; keeplogin=1%7C86400%7C1540535193%7C928f3b0a099e43b54786bae5b3af7def; UM_distinctid=166ae82c49d305-0b5b8218461388-346a7809-13c680-166ae82c49ebb6; __cfduid=dffac38d84811d17b97c16bf7e2ea91171540540289',
+  'cf-connecting-ip' => '114.222.127.102',
+)
+[ info ] [ PARAM ] array (
+  'url' => '/admin/dashboard?ref=addtabs',
+)
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000375s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->login[ /home/wwwroot/apiweb/public_html/application/admin/controller/Index.php ]
+[ info ] [ VIEW ] /home/wwwroot/apiweb/public_html/public/../application/admin/view/index/login.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'background',
+  6 => 'title',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000048s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-27T11:29:10+08:00 ] 114.222.127.102 GET /admin/ajax/lang?callback=define&controllername=index&v=1540610948
+[ info ] api.kkkbw.cn/admin/ajax/lang?callback=define&controllername=index&v=1540610948 [运行时间：0.007692s][吞吐率：130.00req/s] [内存消耗：695.94kb] [文件加载：74]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000073s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000665s ]
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'api.kkkbw.cn',
+  'connection' => 'Keep-Alive',
+  'accept-encoding' => 'gzip',
+  'cf-ipcountry' => 'CN',
+  'x-forwarded-for' => '114.222.127.102',
+  'cf-ray' => '4702130dc7794364-SZV',
+  'x-forwarded-proto' => 'http',
+  'cf-visitor' => '{"scheme":"http"}',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://api.kkkbw.cn/admin/index/login?url=%2Fadmin%2Fdashboard%3Fref%3Daddtabs',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=r5gvlm67fink486vc393n67qo5; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1540175189; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1540265255; uid=2; token=253366d6-c9c4-4ad5-8bf7-e4d3e07f103a; keeplogin=1%7C86400%7C1540535193%7C928f3b0a099e43b54786bae5b3af7def; UM_distinctid=166ae82c49d305-0b5b8218461388-346a7809-13c680-166ae82c49ebb6; __cfduid=dffac38d84811d17b97c16bf7e2ea91171540540289',
+  'cf-connecting-ip' => '114.222.127.102',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'index',
+  'v' => '1540610948',
+)
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000304s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ /home/wwwroot/apiweb/public_html/application/admin/controller/Ajax.php ]
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/admin/lang/zh-cn/index.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000048s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-27T11:29:19+08:00 ] 114.222.127.102 POST /admin/index/login?url=%2Fadmin%2Fdashboard%3Fref%3Daddtabs
+[ info ] api.kkkbw.cn/admin/index/login?url=%2Fadmin%2Fdashboard%3Fref%3Daddtabs [运行时间：0.019827s][吞吐率：50.44req/s] [内存消耗：1,015.84kb] [文件加载：83]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000033s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000480s ]
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'api.kkkbw.cn',
+  'connection' => 'Keep-Alive',
+  'accept-encoding' => 'gzip',
+  'cf-ipcountry' => 'CN',
+  'x-forwarded-for' => '114.222.127.102',
+  'cf-ray' => '4702134201574364-SZV',
+  'content-length' => '77',
+  'x-forwarded-proto' => 'http',
+  'cf-visitor' => '{"scheme":"http"}',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://api.kkkbw.cn',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://api.kkkbw.cn/admin/index/login?url=%2Fadmin%2Fdashboard%3Fref%3Daddtabs',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=r5gvlm67fink486vc393n67qo5; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1540175189; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1540265255; uid=2; token=253366d6-c9c4-4ad5-8bf7-e4d3e07f103a; keeplogin=1%7C86400%7C1540535193%7C928f3b0a099e43b54786bae5b3af7def; UM_distinctid=166ae82c49d305-0b5b8218461388-346a7809-13c680-166ae82c49ebb6; __cfduid=dffac38d84811d17b97c16bf7e2ea91171540540289',
+  'cf-connecting-ip' => '114.222.127.102',
+)
+[ info ] [ PARAM ] array (
+  'url' => '/admin/dashboard?ref=addtabs',
+  '__token__' => '378bfba8fbd047022704527f23e5e1e6',
+  'username' => 'admin',
+  'password' => '5424545145',
+)
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000216s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->login[ /home/wwwroot/apiweb/public_html/application/admin/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.004641s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000483s ] mysql:host=127.0.0.1;dbname=apiweb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin` [ RunTime:0.001004s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_admin` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.000711s ]
+[ sql ] [ SQL ] UPDATE `fa_admin`  SET `logintime`=1540610959,`token`='570bc04f-a77e-4299-9d14-1c4cfc0f0781',`updatetime`=1540610959  WHERE  `id` = 1 [ RunTime:0.002976s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin_log` [ RunTime:0.001199s ]
+[ sql ] [ SQL ] INSERT INTO `fa_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('登录' , '{\"url\":\"\\/admin\\/dashboard?ref=addtabs\",\"__token__\":\"378bfba8fbd047022704527f23e5e1e6\",\"username\":\"admin\"}' , '/admin/index/login?url=%2Fadmin%2Fdashboard%3Fref%3Daddtabs' , 1 , 'admin' , 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36' , '114.222.127.102' , 1540610959) [ RunTime:0.002267s ]
+---------------------------------------------------------------
+[ 2018-10-27T11:29:19+08:00 ] 114.222.127.102 GET /admin/dashboard?ref=addtabs
+[ info ] api.kkkbw.cn/admin/dashboard?ref=addtabs [运行时间：0.008691s][吞吐率：115.06req/s] [内存消耗：1,002.45kb] [文件加载：78]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000041s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000417s ]
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'dashboard',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'api.kkkbw.cn',
+  'connection' => 'Keep-Alive',
+  'accept-encoding' => 'gzip',
+  'cf-ipcountry' => 'CN',
+  'x-forwarded-for' => '114.222.127.102',
+  'cf-ray' => '47021342e19e4364-SZV',
+  'x-forwarded-proto' => 'http',
+  'cf-visitor' => '{"scheme":"http"}',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://api.kkkbw.cn/admin/index/login?url=%2Fadmin%2Fdashboard%3Fref%3Daddtabs',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=r5gvlm67fink486vc393n67qo5; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1540175189; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1540265255; uid=2; token=253366d6-c9c4-4ad5-8bf7-e4d3e07f103a; keeplogin=1%7C86400%7C1540535193%7C928f3b0a099e43b54786bae5b3af7def; UM_distinctid=166ae82c49d305-0b5b8218461388-346a7809-13c680-166ae82c49ebb6; __cfduid=dffac38d84811d17b97c16bf7e2ea91171540540289',
+  'cf-connecting-ip' => '114.222.127.102',
+)
+[ info ] [ PARAM ] array (
+  'ref' => 'addtabs',
+)
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000200s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000046s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000336s ] mysql:host=127.0.0.1;dbname=apiweb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000749s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000342s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000670s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000358s ]
+---------------------------------------------------------------
+[ 2018-10-27T11:29:19+08:00 ] 114.222.127.102 GET /admin/index/index
+[ info ] api.kkkbw.cn/admin/index/index [运行时间：0.463882s][吞吐率：2.16req/s] [内存消耗：1,346.67kb] [文件加载：95]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000042s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000459s ]
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'api.kkkbw.cn',
+  'connection' => 'Keep-Alive',
+  'accept-encoding' => 'gzip',
+  'cf-ipcountry' => 'CN',
+  'x-forwarded-for' => '114.222.127.102',
+  'cf-ray' => '4702134381cf4364-SZV',
+  'x-forwarded-proto' => 'http',
+  'cf-visitor' => '{"scheme":"http"}',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://api.kkkbw.cn/admin/index/login?url=%2Fadmin%2Fdashboard%3Fref%3Daddtabs',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=r5gvlm67fink486vc393n67qo5; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1540175189; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1540265255; uid=2; token=253366d6-c9c4-4ad5-8bf7-e4d3e07f103a; keeplogin=1%7C86400%7C1540535193%7C928f3b0a099e43b54786bae5b3af7def; UM_distinctid=166ae82c49d305-0b5b8218461388-346a7809-13c680-166ae82c49ebb6; __cfduid=dffac38d84811d17b97c16bf7e2ea91171540540289',
+  'cf-connecting-ip' => '114.222.127.102',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000234s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->index[ /home/wwwroot/apiweb/public_html/application/admin/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/wwwroot/apiweb/public_html/public/../application/admin/view/index/index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'menulist',
+  6 => 'navlist',
+  7 => 'fixedmenu',
+  8 => 'referermenu',
+  9 => 'title',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000050s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000371s ] mysql:host=127.0.0.1;dbname=apiweb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000776s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000293s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000679s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000363s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 1 ORDER BY `weigh` DESC [ RunTime:0.000349s ]
+---------------------------------------------------------------
+[ 2018-10-27T11:29:20+08:00 ] 114.222.127.102 GET /admin/dashboard?addtabs=1
+[ info ] api.kkkbw.cn/admin/dashboard?addtabs=1 [运行时间：0.029144s][吞吐率：34.31req/s] [内存消耗：1,187.05kb] [文件加载：85]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000032s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000469s ]
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'dashboard',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'api.kkkbw.cn',
+  'connection' => 'Keep-Alive',
+  'accept-encoding' => 'gzip',
+  'cf-ipcountry' => 'CN',
+  'x-forwarded-for' => '114.222.127.102',
+  'cf-ray' => '4702134853714364-SZV',
+  'x-forwarded-proto' => 'http',
+  'cf-visitor' => '{"scheme":"http"}',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://api.kkkbw.cn/admin/index/index',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=r5gvlm67fink486vc393n67qo5; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1540175189; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1540265255; uid=2; token=253366d6-c9c4-4ad5-8bf7-e4d3e07f103a; keeplogin=1%7C86400%7C1540535193%7C928f3b0a099e43b54786bae5b3af7def; UM_distinctid=166ae82c49d305-0b5b8218461388-346a7809-13c680-166ae82c49ebb6; __cfduid=dffac38d84811d17b97c16bf7e2ea91171540540289',
+  'cf-connecting-ip' => '114.222.127.102',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000273s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/admin/lang/zh-cn/dashboard.php
+[ info ] [ RUN ] app\admin\controller\Dashboard->index[ /home/wwwroot/apiweb/public_html/application/admin/controller/Dashboard.php ]
+[ info ] [ VIEW ] /home/wwwroot/apiweb/public_html/public/../application/admin/view/dashboard/index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'totaluser',
+  6 => 'totalviews',
+  7 => 'totalorder',
+  8 => 'totalorderamount',
+  9 => 'todayuserlogin',
+  10 => 'todayusersignup',
+  11 => 'todayorder',
+  12 => 'unsettleorder',
+  13 => 'sevendnu',
+  14 => 'sevendau',
+  15 => 'paylist',
+  16 => 'createlist',
+  17 => 'addonversion',
+  18 => 'uploadmode',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000042s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000342s ] mysql:host=127.0.0.1;dbname=apiweb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000775s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000306s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000648s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000884s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.000408s ]
+---------------------------------------------------------------
+[ 2018-10-27T11:29:20+08:00 ] 114.222.127.102 GET /admin/ajax/lang?callback=define&controllername=index&v=1540610959
+[ info ] api.kkkbw.cn/admin/ajax/lang?callback=define&controllername=index&v=1540610959 [运行时间：0.005871s][吞吐率：170.33req/s] [内存消耗：698.41kb] [文件加载：74]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000038s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000401s ]
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'api.kkkbw.cn',
+  'connection' => 'Keep-Alive',
+  'accept-encoding' => 'gzip',
+  'cf-ipcountry' => 'CN',
+  'x-forwarded-for' => '114.222.127.102',
+  'cf-ray' => '4702134cf4f24364-SZV',
+  'x-forwarded-proto' => 'http',
+  'cf-visitor' => '{"scheme":"http"}',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://api.kkkbw.cn/admin/index/index',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=r5gvlm67fink486vc393n67qo5; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1540175189; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1540265255; uid=2; token=253366d6-c9c4-4ad5-8bf7-e4d3e07f103a; keeplogin=1%7C86400%7C1540535193%7C928f3b0a099e43b54786bae5b3af7def; UM_distinctid=166ae82c49d305-0b5b8218461388-346a7809-13c680-166ae82c49ebb6; __cfduid=dffac38d84811d17b97c16bf7e2ea91171540540289',
+  'cf-connecting-ip' => '114.222.127.102',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'index',
+  'v' => '1540610959',
+)
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000192s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ /home/wwwroot/apiweb/public_html/application/admin/controller/Ajax.php ]
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/admin/lang/zh-cn/index.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000036s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-27T11:29:21+08:00 ] 114.222.127.102 GET /admin/ajax/lang?callback=define&controllername=dashboard&v=1540610960
+[ info ] api.kkkbw.cn/admin/ajax/lang?callback=define&controllername=dashboard&v=1540610960 [运行时间：0.003545s][吞吐率：282.08req/s] [内存消耗：697.69kb] [文件加载：74]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000323s ]
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'api.kkkbw.cn',
+  'connection' => 'Keep-Alive',
+  'accept-encoding' => 'gzip',
+  'cf-ipcountry' => 'CN',
+  'x-forwarded-for' => '114.222.127.102',
+  'cf-ray' => '4702134eb71443bf-SZV',
+  'x-forwarded-proto' => 'http',
+  'cf-visitor' => '{"scheme":"http"}',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://api.kkkbw.cn/admin/dashboard?addtabs=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=r5gvlm67fink486vc393n67qo5; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1540175189; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1540265255; uid=2; token=253366d6-c9c4-4ad5-8bf7-e4d3e07f103a; keeplogin=1%7C86400%7C1540535193%7C928f3b0a099e43b54786bae5b3af7def; UM_distinctid=166ae82c49d305-0b5b8218461388-346a7809-13c680-166ae82c49ebb6; __cfduid=dffac38d84811d17b97c16bf7e2ea91171540540289',
+  'cf-connecting-ip' => '114.222.127.102',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'dashboard',
+  'v' => '1540610960',
+)
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000148s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ /home/wwwroot/apiweb/public_html/application/admin/controller/Ajax.php ]
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/admin/lang/zh-cn/dashboard.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000033s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-27T14:00:52+08:00 ] 58.217.192.54 GET /
+[ info ] api.kkkbw.cn/ [运行时间：0.007217s][吞吐率：138.56req/s] [内存消耗：643.48kb] [文件加载：68]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000041s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000611s ]
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'api.kkkbw.cn',
+  'connection' => 'Keep-Alive',
+  'accept-encoding' => 'gzip',
+  'cf-ipcountry' => 'CN',
+  'x-forwarded-for' => '58.217.192.54',
+  'cf-ray' => '4702f143407843cb-SZV',
+  'x-forwarded-proto' => 'http',
+  'cf-visitor' => '{"scheme":"http"}',
+  'accept-charset' => 'GBK,utf-8;q=0.7,*;q=0.3',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.89 Safari/537.1',
+  'cf-connecting-ip' => '58.217.192.54',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000369s ]
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /home/wwwroot/apiweb/public_html/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /home/wwwroot/apiweb/public_html/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-27T18:44:03+08:00 ] 114.222.127.102 GET /admin/dashboard?ref=addtabs
+[ info ] api.kkkbw.cn/admin/dashboard?ref=addtabs [运行时间：0.009897s][吞吐率：101.04req/s] [内存消耗：586.97kb] [文件加载：71]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000042s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000713s ]
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'dashboard',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'api.kkkbw.cn',
+  'connection' => 'Keep-Alive',
+  'accept-encoding' => 'gzip',
+  'cf-ipcountry' => 'CN',
+  'x-forwarded-for' => '114.222.127.102',
+  'cf-ray' => '47049014478a438e-SZV',
+  'x-forwarded-proto' => 'http',
+  'cf-visitor' => '{"scheme":"http"}',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://api.kkkbw.cn/admin/dashboard?ref=addtabs',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=r5gvlm67fink486vc393n67qo5; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1540175189; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1540265255; uid=2; token=253366d6-c9c4-4ad5-8bf7-e4d3e07f103a; keeplogin=1%7C86400%7C1540535193%7C928f3b0a099e43b54786bae5b3af7def; UM_distinctid=166ae82c49d305-0b5b8218461388-346a7809-13c680-166ae82c49ebb6; __cfduid=dffac38d84811d17b97c16bf7e2ea91171540540289',
+  'cf-connecting-ip' => '114.222.127.102',
+)
+[ info ] [ PARAM ] array (
+  'ref' => 'addtabs',
+)
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000372s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /home/wwwroot/apiweb/public_html/public/../application/common/view/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000066s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-27T18:44:04+08:00 ] 114.222.127.102 GET /admin/index/login?url=%2Fadmin%2Fdashboard%3Fref%3Daddtabs
+[ info ] api.kkkbw.cn/admin/index/login?url=%2Fadmin%2Fdashboard%3Fref%3Daddtabs [运行时间：0.005653s][吞吐率：176.90req/s] [内存消耗：698.33kb] [文件加载：74]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000035s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000371s ]
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'api.kkkbw.cn',
+  'connection' => 'Keep-Alive',
+  'accept-encoding' => 'gzip',
+  'cf-ipcountry' => 'CN',
+  'x-forwarded-for' => '114.222.127.102',
+  'cf-ray' => '4704901d4685438e-SZV',
+  'x-forwarded-proto' => 'http',
+  'cf-visitor' => '{"scheme":"http"}',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://api.kkkbw.cn/admin/dashboard?ref=addtabs',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=r5gvlm67fink486vc393n67qo5; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1540175189; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1540265255; uid=2; token=253366d6-c9c4-4ad5-8bf7-e4d3e07f103a; keeplogin=1%7C86400%7C1540535193%7C928f3b0a099e43b54786bae5b3af7def; UM_distinctid=166ae82c49d305-0b5b8218461388-346a7809-13c680-166ae82c49ebb6; __cfduid=dffac38d84811d17b97c16bf7e2ea91171540540289',
+  'cf-connecting-ip' => '114.222.127.102',
+)
+[ info ] [ PARAM ] array (
+  'url' => '/admin/dashboard?ref=addtabs',
+)
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000161s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->login[ /home/wwwroot/apiweb/public_html/application/admin/controller/Index.php ]
+[ info ] [ VIEW ] /home/wwwroot/apiweb/public_html/public/../application/admin/view/index/login.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'background',
+  6 => 'title',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000035s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-27T18:44:06+08:00 ] 114.222.127.102 GET /admin/ajax/lang?callback=define&controllername=index&v=1540637044
+[ info ] api.kkkbw.cn/admin/ajax/lang?callback=define&controllername=index&v=1540637044 [运行时间：0.005784s][吞吐率：172.89req/s] [内存消耗：695.94kb] [文件加载：74]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000075s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000445s ]
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'api.kkkbw.cn',
+  'connection' => 'Keep-Alive',
+  'accept-encoding' => 'gzip',
+  'cf-ipcountry' => 'CN',
+  'x-forwarded-for' => '114.222.127.102',
+  'cf-ray' => '47049025b4db43d1-SZV',
+  'x-forwarded-proto' => 'http',
+  'cf-visitor' => '{"scheme":"http"}',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://api.kkkbw.cn/admin/index/login?url=%2Fadmin%2Fdashboard%3Fref%3Daddtabs',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=r5gvlm67fink486vc393n67qo5; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1540175189; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1540265255; uid=2; token=253366d6-c9c4-4ad5-8bf7-e4d3e07f103a; keeplogin=1%7C86400%7C1540535193%7C928f3b0a099e43b54786bae5b3af7def; UM_distinctid=166ae82c49d305-0b5b8218461388-346a7809-13c680-166ae82c49ebb6; __cfduid=dffac38d84811d17b97c16bf7e2ea91171540540289',
+  'cf-connecting-ip' => '114.222.127.102',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'index',
+  'v' => '1540637044',
+)
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000264s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ /home/wwwroot/apiweb/public_html/application/admin/controller/Ajax.php ]
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/admin/lang/zh-cn/index.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000047s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-27T18:44:12+08:00 ] 114.222.127.102 POST /admin/index/login?url=%2Fadmin%2Fdashboard%3Fref%3Daddtabs
+[ info ] api.kkkbw.cn/admin/index/login?url=%2Fadmin%2Fdashboard%3Fref%3Daddtabs [运行时间：0.034807s][吞吐率：28.73req/s] [内存消耗：1,015.84kb] [文件加载：83]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000054s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000889s ]
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'api.kkkbw.cn',
+  'connection' => 'Keep-Alive',
+  'accept-encoding' => 'gzip',
+  'cf-ipcountry' => 'CN',
+  'x-forwarded-for' => '114.222.127.102',
+  'cf-ray' => '4704904de43143e9-SZV',
+  'content-length' => '77',
+  'x-forwarded-proto' => 'http',
+  'cf-visitor' => '{"scheme":"http"}',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://api.kkkbw.cn',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://api.kkkbw.cn/admin/index/login?url=%2Fadmin%2Fdashboard%3Fref%3Daddtabs',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=r5gvlm67fink486vc393n67qo5; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1540175189; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1540265255; uid=2; token=253366d6-c9c4-4ad5-8bf7-e4d3e07f103a; keeplogin=1%7C86400%7C1540535193%7C928f3b0a099e43b54786bae5b3af7def; UM_distinctid=166ae82c49d305-0b5b8218461388-346a7809-13c680-166ae82c49ebb6; __cfduid=dffac38d84811d17b97c16bf7e2ea91171540540289',
+  'cf-connecting-ip' => '114.222.127.102',
+)
+[ info ] [ PARAM ] array (
+  'url' => '/admin/dashboard?ref=addtabs',
+  '__token__' => '12977e6eedffe62ed504eec680f6dd3d',
+  'username' => 'admin',
+  'password' => '5424545145',
+)
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000370s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->login[ /home/wwwroot/apiweb/public_html/application/admin/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.004844s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001556s ] mysql:host=127.0.0.1;dbname=apiweb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin` [ RunTime:0.001976s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_admin` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.001428s ]
+[ sql ] [ SQL ] UPDATE `fa_admin`  SET `logintime`=1540637052,`token`='574572cd-dd97-4011-9b61-391a234ee79f',`updatetime`=1540637052  WHERE  `id` = 1 [ RunTime:0.009974s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin_log` [ RunTime:0.000885s ]
+[ sql ] [ SQL ] INSERT INTO `fa_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('登录' , '{\"url\":\"\\/admin\\/dashboard?ref=addtabs\",\"__token__\":\"12977e6eedffe62ed504eec680f6dd3d\",\"username\":\"admin\"}' , '/admin/index/login?url=%2Fadmin%2Fdashboard%3Fref%3Daddtabs' , 1 , 'admin' , 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36' , '114.222.127.102' , 1540637052) [ RunTime:0.003046s ]
+---------------------------------------------------------------
+[ 2018-10-27T18:44:12+08:00 ] 114.222.127.102 GET /admin/dashboard?ref=addtabs
+[ info ] api.kkkbw.cn/admin/dashboard?ref=addtabs [运行时间：0.008662s][吞吐率：115.45req/s] [内存消耗：1,002.45kb] [文件加载：78]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000040s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000399s ]
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'dashboard',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'api.kkkbw.cn',
+  'connection' => 'Keep-Alive',
+  'accept-encoding' => 'gzip',
+  'cf-ipcountry' => 'CN',
+  'x-forwarded-for' => '114.222.127.102',
+  'cf-ray' => '4704904ed4dc43e9-SZV',
+  'x-forwarded-proto' => 'http',
+  'cf-visitor' => '{"scheme":"http"}',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://api.kkkbw.cn/admin/index/login?url=%2Fadmin%2Fdashboard%3Fref%3Daddtabs',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=r5gvlm67fink486vc393n67qo5; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1540175189; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1540265255; uid=2; token=253366d6-c9c4-4ad5-8bf7-e4d3e07f103a; keeplogin=1%7C86400%7C1540535193%7C928f3b0a099e43b54786bae5b3af7def; UM_distinctid=166ae82c49d305-0b5b8218461388-346a7809-13c680-166ae82c49ebb6; __cfduid=dffac38d84811d17b97c16bf7e2ea91171540540289',
+  'cf-connecting-ip' => '114.222.127.102',
+)
+[ info ] [ PARAM ] array (
+  'ref' => 'addtabs',
+)
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000199s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000043s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000450s ] mysql:host=127.0.0.1;dbname=apiweb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000783s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000357s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000693s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000344s ]
+---------------------------------------------------------------
+[ 2018-10-27T18:44:13+08:00 ] 114.222.127.102 GET /admin/index/index
+[ info ] api.kkkbw.cn/admin/index/index [运行时间：0.492037s][吞吐率：2.03req/s] [内存消耗：1,298.72kb] [文件加载：93]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000036s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000382s ]
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'api.kkkbw.cn',
+  'connection' => 'Keep-Alive',
+  'accept-encoding' => 'gzip',
+  'cf-ipcountry' => 'CN',
+  'x-forwarded-for' => '114.222.127.102',
+  'cf-ray' => '4704904f855c43e9-SZV',
+  'x-forwarded-proto' => 'http',
+  'cf-visitor' => '{"scheme":"http"}',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://api.kkkbw.cn/admin/index/login?url=%2Fadmin%2Fdashboard%3Fref%3Daddtabs',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=r5gvlm67fink486vc393n67qo5; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1540175189; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1540265255; uid=2; token=253366d6-c9c4-4ad5-8bf7-e4d3e07f103a; keeplogin=1%7C86400%7C1540535193%7C928f3b0a099e43b54786bae5b3af7def; UM_distinctid=166ae82c49d305-0b5b8218461388-346a7809-13c680-166ae82c49ebb6; __cfduid=dffac38d84811d17b97c16bf7e2ea91171540540289',
+  'cf-connecting-ip' => '114.222.127.102',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000185s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->index[ /home/wwwroot/apiweb/public_html/application/admin/controller/Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/wwwroot/apiweb/public_html/public/../application/admin/view/index/index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'menulist',
+  6 => 'navlist',
+  7 => 'fixedmenu',
+  8 => 'referermenu',
+  9 => 'title',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000040s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000320s ] mysql:host=127.0.0.1;dbname=apiweb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000746s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000282s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000655s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000319s ]
+---------------------------------------------------------------
+[ 2018-10-27T18:44:13+08:00 ] 114.222.127.102 GET /admin/dashboard?addtabs=1
+[ info ] api.kkkbw.cn/admin/dashboard?addtabs=1 [运行时间：0.016160s][吞吐率：61.88req/s] [内存消耗：1,093.96kb] [文件加载：83]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000062s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000759s ]
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'dashboard',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'api.kkkbw.cn',
+  'connection' => 'Keep-Alive',
+  'accept-encoding' => 'gzip',
+  'cf-ipcountry' => 'CN',
+  'x-forwarded-for' => '114.222.127.102',
+  'cf-ray' => '47049054a11343e9-SZV',
+  'x-forwarded-proto' => 'http',
+  'cf-visitor' => '{"scheme":"http"}',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://api.kkkbw.cn/admin/index/index',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=r5gvlm67fink486vc393n67qo5; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1540175189; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1540265255; uid=2; token=253366d6-c9c4-4ad5-8bf7-e4d3e07f103a; keeplogin=1%7C86400%7C1540535193%7C928f3b0a099e43b54786bae5b3af7def; UM_distinctid=166ae82c49d305-0b5b8218461388-346a7809-13c680-166ae82c49ebb6; __cfduid=dffac38d84811d17b97c16bf7e2ea91171540540289',
+  'cf-connecting-ip' => '114.222.127.102',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000302s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/admin/lang/zh-cn/dashboard.php
+[ info ] [ RUN ] app\admin\controller\Dashboard->index[ /home/wwwroot/apiweb/public_html/application/admin/controller/Dashboard.php ]
+[ info ] [ VIEW ] /home/wwwroot/apiweb/public_html/public/../application/admin/view/dashboard/index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'totaluser',
+  6 => 'totalviews',
+  7 => 'totalorder',
+  8 => 'totalorderamount',
+  9 => 'todayuserlogin',
+  10 => 'todayusersignup',
+  11 => 'todayorder',
+  12 => 'unsettleorder',
+  13 => 'sevendnu',
+  14 => 'sevendau',
+  15 => 'paylist',
+  16 => 'createlist',
+  17 => 'addonversion',
+  18 => 'uploadmode',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000042s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000478s ] mysql:host=127.0.0.1;dbname=apiweb;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.001564s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fa_auth_group_access` `aga` LEFT JOIN `fa_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000295s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000740s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000350s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.000399s ]
+---------------------------------------------------------------
+[ 2018-10-27T18:44:14+08:00 ] 114.222.127.102 GET /admin/ajax/lang?callback=define&controllername=index&v=1540637052
+[ info ] api.kkkbw.cn/admin/ajax/lang?callback=define&controllername=index&v=1540637052 [运行时间：0.006020s][吞吐率：166.12req/s] [内存消耗：698.41kb] [文件加载：74]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000048s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000479s ]
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'api.kkkbw.cn',
+  'connection' => 'Keep-Alive',
+  'accept-encoding' => 'gzip',
+  'cf-ipcountry' => 'CN',
+  'x-forwarded-for' => '114.222.127.102',
+  'cf-ray' => '47049058f3fa43e9-SZV',
+  'x-forwarded-proto' => 'http',
+  'cf-visitor' => '{"scheme":"http"}',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://api.kkkbw.cn/admin/index/index',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=r5gvlm67fink486vc393n67qo5; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1540175189; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1540265255; uid=2; token=253366d6-c9c4-4ad5-8bf7-e4d3e07f103a; keeplogin=1%7C86400%7C1540535193%7C928f3b0a099e43b54786bae5b3af7def; UM_distinctid=166ae82c49d305-0b5b8218461388-346a7809-13c680-166ae82c49ebb6; __cfduid=dffac38d84811d17b97c16bf7e2ea91171540540289',
+  'cf-connecting-ip' => '114.222.127.102',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'index',
+  'v' => '1540637052',
+)
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000298s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ /home/wwwroot/apiweb/public_html/application/admin/controller/Ajax.php ]
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/admin/lang/zh-cn/index.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000053s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-27T18:44:14+08:00 ] 114.222.127.102 GET /admin/ajax/lang?callback=define&controllername=dashboard&v=1540637053
+[ info ] api.kkkbw.cn/admin/ajax/lang?callback=define&controllername=dashboard&v=1540637053 [运行时间：0.005525s][吞吐率：180.99req/s] [内存消耗：697.69kb] [文件加载：74]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000040s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000414s ]
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'api.kkkbw.cn',
+  'connection' => 'Keep-Alive',
+  'accept-encoding' => 'gzip',
+  'cf-ipcountry' => 'CN',
+  'x-forwarded-for' => '114.222.127.102',
+  'cf-ray' => '4704905b55da43e9-SZV',
+  'x-forwarded-proto' => 'http',
+  'cf-visitor' => '{"scheme":"http"}',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://api.kkkbw.cn/admin/dashboard?addtabs=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=r5gvlm67fink486vc393n67qo5; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1540175189; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1540265255; uid=2; token=253366d6-c9c4-4ad5-8bf7-e4d3e07f103a; keeplogin=1%7C86400%7C1540535193%7C928f3b0a099e43b54786bae5b3af7def; UM_distinctid=166ae82c49d305-0b5b8218461388-346a7809-13c680-166ae82c49ebb6; __cfduid=dffac38d84811d17b97c16bf7e2ea91171540540289',
+  'cf-connecting-ip' => '114.222.127.102',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'dashboard',
+  'v' => '1540637053',
+)
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000180s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ /home/wwwroot/apiweb/public_html/application/admin/controller/Ajax.php ]
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/admin/lang/zh-cn/dashboard.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000037s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-27T23:55:35+08:00 ] 111.206.36.143 GET /admin/dashboard
+[ info ] api.kkkbw.cn/admin/dashboard [运行时间：0.008551s][吞吐率：116.95req/s] [内存消耗：533.72kb] [文件加载：69]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000032s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000598s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'dashboard',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'api.kkkbw.cn',
+  'connection' => 'Keep-Alive',
+  'accept-encoding' => 'gzip',
+  'cf-ipcountry' => 'CN',
+  'x-forwarded-for' => '111.206.36.143',
+  'cf-ray' => '4706586b818f66e8-TSN',
+  'x-forwarded-proto' => 'http',
+  'cf-visitor' => '{"scheme":"http"}',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:43.0) Gecko/20100101 Firefox/43.0',
+  'referer' => 'http://www.baidu.com/s?wd=JEPJ',
+  'accept-language' => 'en,*',
+  'cf-connecting-ip' => '111.206.36.143',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000495s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /home/wwwroot/apiweb/public_html/public/../application/common/view/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000075s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-27T23:55:35+08:00 ] 111.206.36.10 GET /admin/index/index
+[ info ] api.kkkbw.cn/admin/index/index [运行时间：0.005505s][吞吐率：181.65req/s] [内存消耗：534.70kb] [文件加载：69]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000047s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000521s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'api.kkkbw.cn',
+  'connection' => 'Keep-Alive',
+  'accept-encoding' => 'gzip',
+  'cf-ipcountry' => 'CN',
+  'x-forwarded-for' => '111.206.36.10',
+  'cf-ray' => '4706586d71fc66f4-TSN',
+  'x-forwarded-proto' => 'http',
+  'cf-visitor' => '{"scheme":"http"}',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:43.0) Gecko/20100101 Firefox/43.0',
+  'referer' => 'http://www.baidu.com/s?wd=JEPJ',
+  'accept-language' => 'en,*',
+  'cf-connecting-ip' => '111.206.36.10',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000242s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /home/wwwroot/apiweb/public_html/public/../application/common/view/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000051s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-27T23:55:35+08:00 ] 111.206.36.17 GET /
+[ info ] api.kkkbw.cn/ [运行时间：0.006845s][吞吐率：146.09req/s] [内存消耗：604.73kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000050s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000524s ]
+[ info ] [ BIND ] 'index'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'api.kkkbw.cn',
+  'connection' => 'Keep-Alive',
+  'accept-encoding' => 'gzip',
+  'cf-ipcountry' => 'CN',
+  'x-forwarded-for' => '111.206.36.17',
+  'cf-ray' => '4706586e647266b8-TSN',
+  'x-forwarded-proto' => 'http',
+  'cf-visitor' => '{"scheme":"http"}',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:43.0) Gecko/20100101 Firefox/43.0',
+  'referer' => 'http://www.baidu.com/s?wd=JEPJ',
+  'accept-language' => 'en,*',
+  'cf-connecting-ip' => '111.206.36.17',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000236s ]
+[ info ] [ LANG ] /home/wwwroot/apiweb/public_html/public/../application/index/lang/en/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /home/wwwroot/apiweb/public_html/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /home/wwwroot/apiweb/public_html/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-27T23:55:35+08:00 ] 111.206.36.145 GET /admin/index/login
+[ info ] api.kkkbw.cn/admin/index/login [运行时间：0.004543s][吞吐率：220.12req/s] [内存消耗：636.78kb] [文件加载：71]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000035s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000421s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'api.kkkbw.cn',
+  'connection' => 'Keep-Alive',
+  'accept-encoding' => 'gzip',
+  'cf-ipcountry' => 'CN',
+  'x-forwarded-for' => '111.206.36.145',
+  'cf-ray' => '4706586f618066d0-TSN',
+  'x-forwarded-proto' => 'http',
+  'cf-visitor' => '{"scheme":"http"}',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:43.0) Gecko/20100101 Firefox/43.0',
+  'referer' => 'http://www.baidu.com/s?wd=JEPJ',
+  'accept-language' => 'en,*',
+  'cf-connecting-ip' => '111.206.36.145',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000188s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->login[ /home/wwwroot/apiweb/public_html/application/admin/controller/Index.php ]
+[ info ] [ VIEW ] /home/wwwroot/apiweb/public_html/public/../application/admin/view/index/login.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'background',
+  6 => 'title',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000031s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-27T23:55:37+08:00 ] 111.206.36.133 GET /admin/ajax/lang?callback=define&controllername=index&v=1540655735
+[ info ] api.kkkbw.cn/admin/ajax/lang?callback=define&controllername=index&v=1540655735 [运行时间：0.006121s][吞吐率：163.37req/s] [内存消耗：636.77kb] [文件加载：70]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000095s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000586s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'api.kkkbw.cn',
+  'connection' => 'Keep-Alive',
+  'accept-encoding' => 'gzip',
+  'cf-ipcountry' => 'CN',
+  'x-forwarded-for' => '111.206.36.133',
+  'cf-ray' => '4706587ac33766d0-TSN',
+  'x-forwarded-proto' => 'http',
+  'cf-visitor' => '{"scheme":"http"}',
+  'accept' => '*/*',
+  'referer' => 'http://api.kkkbw.cn/admin/index/login',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:43.0) Gecko/20100101 Firefox/43.0',
+  'cookie' => '__cfduid=d2f19a795d49ea7951be8f5431732dd871540655710; PHPSESSID=en3n7nvjr9u60mnq1pp3uhq280',
+  'accept-language' => 'en,*',
+  'cf-connecting-ip' => '111.206.36.133',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'index',
+  'v' => '1540655735',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000249s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ /home/wwwroot/apiweb/public_html/application/admin/controller/Ajax.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000045s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-27T23:55:38+08:00 ] 111.206.36.143 GET /admin/index/login?url=%2Fadmin%2Fdashboard
+[ info ] api.kkkbw.cn/admin/index/login?url=%2Fadmin%2Fdashboard [运行时间：0.006618s][吞吐率：151.10req/s] [内存消耗：637.99kb] [文件加载：71]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000040s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000493s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'api.kkkbw.cn',
+  'connection' => 'Keep-Alive',
+  'accept-encoding' => 'gzip',
+  'cf-ipcountry' => 'CN',
+  'x-forwarded-for' => '111.206.36.143',
+  'cf-ray' => '4706587f345d66e8-TSN',
+  'x-forwarded-proto' => 'http',
+  'cf-visitor' => '{"scheme":"http"}',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'referer' => 'http://api.kkkbw.cn/admin/dashboard',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:43.0) Gecko/20100101 Firefox/43.0',
+  'cookie' => '__cfduid=db174d5b9da6b8b3f2b44aa63e6c8dd811540655710; PHPSESSID=35aaoegh7o437ep6cra2op66o7',
+  'accept-language' => 'en,*',
+  'cf-connecting-ip' => '111.206.36.143',
+)
+[ info ] [ PARAM ] array (
+  'url' => '/admin/dashboard',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000240s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->login[ /home/wwwroot/apiweb/public_html/application/admin/controller/Index.php ]
+[ info ] [ VIEW ] /home/wwwroot/apiweb/public_html/public/../application/admin/view/index/login.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'background',
+  6 => 'title',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000046s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-27T23:55:38+08:00 ] 111.206.36.10 GET /admin/index/login?url=%2Fadmin%2Findex%2Findex
+[ info ] api.kkkbw.cn/admin/index/login?url=%2Fadmin%2Findex%2Findex [运行时间：0.005111s][吞吐率：195.65req/s] [内存消耗：638.02kb] [文件加载：71]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000037s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000440s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'api.kkkbw.cn',
+  'connection' => 'Keep-Alive',
+  'accept-encoding' => 'gzip',
+  'cf-ipcountry' => 'CN',
+  'x-forwarded-for' => '111.206.36.10',
+  'cf-ray' => '4706588104e566f4-TSN',
+  'x-forwarded-proto' => 'http',
+  'cf-visitor' => '{"scheme":"http"}',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'referer' => 'http://api.kkkbw.cn/admin/index/index',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:43.0) Gecko/20100101 Firefox/43.0',
+  'cookie' => '__cfduid=df3443249f884811389dc063f042c39e71540655710; PHPSESSID=4v41as9926ee7503uinhn70g74',
+  'accept-language' => 'en,*',
+  'cf-connecting-ip' => '111.206.36.10',
+)
+[ info ] [ PARAM ] array (
+  'url' => '/admin/index/index',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000213s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->login[ /home/wwwroot/apiweb/public_html/application/admin/controller/Index.php ]
+[ info ] [ VIEW ] /home/wwwroot/apiweb/public_html/public/../application/admin/view/index/login.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'background',
+  6 => 'title',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000037s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-27T23:55:40+08:00 ] 111.206.36.147 GET /admin/ajax/lang?callback=define&controllername=index&v=1540655738
+[ info ] api.kkkbw.cn/admin/ajax/lang?callback=define&controllername=index&v=1540655738 [运行时间：0.003558s][吞吐率：281.06req/s] [内存消耗：636.93kb] [文件加载：70]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000036s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000374s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'api.kkkbw.cn',
+  'connection' => 'Keep-Alive',
+  'accept-encoding' => 'gzip',
+  'cf-ipcountry' => 'CN',
+  'x-forwarded-for' => '111.206.36.147',
+  'cf-ray' => '47065889f58066d0-TSN',
+  'x-forwarded-proto' => 'http',
+  'cf-visitor' => '{"scheme":"http"}',
+  'accept' => '*/*',
+  'referer' => 'http://api.kkkbw.cn/admin/index/login?url=%2Fadmin%2Findex%2Findex',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:43.0) Gecko/20100101 Firefox/43.0',
+  'cookie' => '__cfduid=df3443249f884811389dc063f042c39e71540655710; PHPSESSID=4v41as9926ee7503uinhn70g74',
+  'accept-language' => 'en,*',
+  'cf-connecting-ip' => '111.206.36.147',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'index',
+  'v' => '1540655738',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000158s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ /home/wwwroot/apiweb/public_html/application/admin/controller/Ajax.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000032s ]
+[ info ] [ LOG ] INIT File
